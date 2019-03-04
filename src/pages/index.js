@@ -152,7 +152,7 @@ export default () => (
           />
           <Question
             name="Who can participate?"
-            body="Any current student grades 8–12. If you’re under/over that age, send us a chat (in the corner) & we’ll see what we can do."
+            body="Any current student grades 8–12. If you’re under/over that age, send us a chat message (in the bottom right corner) & we’ll see what we can do."
           />
           <Question
             name="What if I’m new to coding?"
@@ -160,11 +160,11 @@ export default () => (
           />
           <Question
             name="What if I can already code?"
-            body="All skill levels are welcome. We welcome absolute beginners, experts, & everyone in between."
+            body="Hack Chicago is for you, too! We welcome (& have prizes for) absolute beginners, experts, & everyone in between."
           />
           <Question
             name="Do I need a team?"
-            body="Nope! You’ll have an opportunity to meet fellow hackers and make teams of up to 4—find some new friends, bring yours, or work alone."
+            body="Nope! You’ll have an opportunity to meet fellow hackers and make teams of up to 6—find some new friends, bring yours, or work alone."
           />
           <Question
             name="What can I make?"
@@ -172,7 +172,7 @@ export default () => (
           />
           <Question
             name="What should I bring?"
-            body="Student ID, computer, chargers, anything for your hack (hardware?), toiletries, & a sleeping bag (maybe)."
+            body="Student ID, computer, chargers, anything for your hack (e.g. hardware), toiletries, & a sleeping bag (if you plan on sleeping)."
           />
           <Question
             name="Who runs this? Is it supervised?"
