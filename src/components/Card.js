@@ -57,6 +57,10 @@ const Card = styled(Flex).attrs({
       }
     }
   }
+
+  h3 {
+    line-height: 1.125;
+  }
 `
 
 export default Card

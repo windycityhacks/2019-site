@@ -27,6 +27,7 @@ import Module from 'components/Module'
 import Nav from 'components/Nav'
 import Photo from 'components/Photo'
 import Sponsors from 'components/Sponsors'
+import Video from 'components/Video'
 
 const Lead = styled(Container.withComponent(Text)).attrs({
   fontSize: 4,
@@ -115,7 +116,7 @@ export default () => (
         <Container maxWidth={48} mx={0}>
           <Bannerline />
           <Headline color="alt">Welcome to the “hackathon.”</Headline>
-          <Lead my={3} maxWidth={48}>
+          <Lead mt={3} maxWidth={48}>
             Hack Chicago is a 24-hour event where 350 programmers, artists,
             designers, & other high schoolers from across the Midwest will come
             to together to build apps & games. We’ll provide workshops,
@@ -123,45 +124,26 @@ export default () => (
             morning, judges will pick the best projects to demo and win prizes.
           </Lead>
         </Container>
-        {/* <Modules>
-          <Module
-            icon="welcome"
-            name="Beginner-oriented"
-            body="Students of all skill levels are welcome—we’ll hold multiple intro workshops & mentors will help you out!"
-          />
-          <Module
-            icon="emoji"
-            name="Endless fun"
-            body="It goes way beyond coding. Meet new friends, come to the 2am dance party, win prizes."
-          />
-            icon="bag"
-            name="Phenomenal prizes"
-            body="Enjoy the incredible prizes."
-          />
-        </Modules> */}
         <Grid mt={[4, 5]}>
           <Card>
             <Heading.h3 fontSize={[4, 5]} my={0}>
-              Third time’s the charm
+              Building on years of building opportunity
             </Heading.h3>
-            <Text fontSize={3} my={2}>
-              Last year, we ran the Midwest’s largest HS hackathon. This year,
-              we’re focusing on making the best possible experience & reaching
-              every Chicago student.
+            <Text fontSize={3} mt={2}>
+              We began in 2017 as ChicagoHacks, then last year ran the Midwest’s
+              largest HS hackathon ever with 250+ students. This year, we’re
+              back!
             </Text>
             <LinkOut href="https://2018.hackchicago.io">
-              See what happened last year
+              See last year’s event
             </LinkOut>
           </Card>
-          <HiddenPhoto
-            xs
-            sm
-            aria-label="High school students coding at Hack Chicago 2018"
-            src="https://d33wubrfki0l68.cloudfront.net/c7df4ce09878b04d7513e2dc17a37b902c79e516/bad6d/img/photos/gallery/1.jpg"
-          />
+          <Video aria-label="High school students coding at Hack Chicago 2018">
+            <source src="/2018/hacking.mp4" type="video/mp4" />
+          </Video>
           <Photo
-            aria-label="Projects being presented at Hack Chicago 2018"
-            src="https://d33wubrfki0l68.cloudfront.net/c7df4ce09878b04d7513e2dc17a37b902c79e516/bad6d/img/photos/gallery/1.jpg"
+            aria-label="Opening ceremony at Hack Chicago 2018"
+            src="/2018/ceremony.jpg"
           />
           <Card>
             <Heading.h3 f={[4, 5]} my={0}>
@@ -224,7 +206,7 @@ export default () => (
                 <A href="https://hackclub.com" color={theme.colors.alt}>
                   Hack Club
                 </A>
-                . The event is fully supervised by over a dozen adults (with
+                . The event is fully supervised by several dozen adults (with
                 background checks).
               </>
             }
