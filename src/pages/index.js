@@ -110,8 +110,7 @@ export default () => (
             </Heading.h3>
             <Text fontSize={3} mt={2}>
               We began in 2017 as ChicagoHacks, then last year ran the Midwest’s
-              largest HS hackathon ever with 250+ students. This year, we’re
-              back!
+              largest HS hackathon ever with 250+ students.
             </Text>
             <LinkOut href="https://2018.hackchicago.io">
               See last year’s event
@@ -149,7 +148,7 @@ export default () => (
         <Grid>
           <Question
             name="How much does it cost?"
-            body="Nothing, it’s totally free. Registration and attendance are 100% free, with meals, drinks, swag, & workshops included."
+            body="Nothing! Registration and attendance are 100% free, with meals, drinks, swag, & workshops included."
           />
           <Question
             name="Who can participate?"
