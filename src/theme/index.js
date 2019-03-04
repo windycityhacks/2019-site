@@ -56,6 +56,12 @@ injectGlobal`
   b {
     font-weight: bold !important;
   }
+  @supports (padding: calc(max(env(safe-area-inset-left)))) {
+    #___gatsby > div > * {
+      padding-left: calc(max(${theme.space[2]}px, env(safe-area-inset-left)));
+      padding-right: calc(max(${theme.space[2]}px, env(safe-area-inset-right)));
+    }
+  }
 `
 
 const ThemeProvider = ({ children }) => (

@@ -9,24 +9,38 @@ import { theme } from 'theme'
 import Action from 'components/Action'
 
 const Layout = styled(Flex).attrs({
-  align: 'flex-end',
+  flexDirection: ['column', 'row'],
+  align: ['start', 'flex-end'],
+  width: 1,
   wrap: true
 })`
   max-width: 32rem;
   position: relative;
 
-  label:first-child {
+  label {
     flex: 1 1 auto;
     margin-bottom: 0;
+    width: 100%;
+  }
+
+  input:focus {
+    box-shadow: none;
   }
 
   a {
     flex-shrink: 0;
     margin-top: ${theme.space[3]}px;
-    ${theme.mediaQueries.md} {
+  }
+
+  ${theme.mediaQueries.md} {
+    label {
+      width: auto;
+    }
+
+    a {
       margin-left: ${theme.space[3]}px;
       margin-top: 0;
-      min-height: 40px;
+      line-height: 1.25;
     }
   }
 `
@@ -80,7 +94,7 @@ export default class EmailForm extends React.Component {
                   type="email"
                   name="email"
                   label="Email"
-                  placeholder="simone@hackchicago.io"
+                  placeholder="amanda@hackchicago.io"
                   error={errors.email}
                   value={values.email}
                   onChange={handleChange}

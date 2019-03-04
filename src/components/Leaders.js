@@ -13,6 +13,7 @@ const Base = styled(Box)`
 `
 const Wrap = styled(Box)`
   position: relative;
+  flex-shrink: 0;
   width: 72px;
   height: 72px;
   ${Avatar} {

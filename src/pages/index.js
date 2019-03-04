@@ -1,29 +1,26 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import {
   Box,
   Container,
-  Flex,
   Heading,
-  Image,
   Text,
-  Hide,
   Link as A
 } from '@hackclub/design-system'
 import { theme } from 'theme'
 import { Link } from 'gatsby'
-import Action from 'components/Action'
-import Apply from 'components/Apply'
-import Bannerline from 'components/Bannerline'
-import Calendar from 'components/Calendar'
+// import Action from 'components/Action'
+// import Apply from 'components/Apply'
+// import Calendar from 'components/Calendar'
 import Card from 'components/Card'
 import EmailForm from 'components/EmailForm'
 import Footer from 'components/Footer'
+import Header from 'components/Header'
 import Headline from 'components/Headline'
 import Layout from 'components/Layout'
 import Leadership from 'components/Leadership'
-import Modules from 'components/Modules'
-import Module from 'components/Module'
+// import Modules from 'components/Modules'
+// import Module from 'components/Module'
 import Nav from 'components/Nav'
 import Photo from 'components/Photo'
 import Sponsors from 'components/Sponsors'
@@ -34,7 +31,13 @@ const Lead = styled(Container.withComponent(Text)).attrs({
   mx: 'auto'
 })``
 
-const HiddenPhoto = styled(Hide.withComponent(Photo))``
+const Ultralead = styled(Text).attrs({ fontSize: [5, 6, 7] })`
+  color: ${theme.colors.primary};
+  line-height: 1.0625;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  max-width: 52rem;
+`
 
 const Grid = styled(Container).attrs({ maxWidth: 72, mt: [3, 4] })`
   display: grid;
@@ -69,65 +72,41 @@ A.link = styled(A.withComponent(Link))``
 export default () => (
   <Layout>
     <Nav />
-    <Box.header color={theme.colors.primaryDark} pt={[3, 4]} pb={[3, 5]}>
-      <Container width={1} px={3}>
-        <Heading.h1 fontSize={[6, 7, 8, 9]}>Hack Chicago</Heading.h1>
-        <Heading.h2
-          fontSize={[5, 6]}
-          mt={2}
-          mb={3}
-          style={{ maxWidth: '48rem' }}
-        >
-          Welcome back to Chicago’s premier high school hackathon.
-        </Heading.h2>
-        <EmailForm />
-        {/*
-        <Flex align="center" my={4}>
-          <Calendar month="June" day={22} />
-          <Text.span align="left" fontSize={[3, 4]} ml={4}>
-            <strong>Late registration</strong>
-            <br />
-            <A.link
-              color="inherit"
-              fontSize={[2, 3]}
-              underline
-              chevronRight
-              to="/location"
-            >
-              Chicago, IL
-            </A.link>
-          </Text.span>
-        </Flex>
-        <Flex align="center" wrap>
-          <Action
-            to="/register"
-            children="Reserve your spot"
-            fontSize={[3, 4]}
-            bg={theme.colors.primary}
-            chevronRight
-            scale
-          />
-        </Flex>
-        */}
+    <Header />
+    <Box.section bg={theme.colors.primaryWash}>
+      <Container
+        width={1}
+        px={3}
+        pt={[4, 5]}
+        pb={[5, 6]}
+        color={theme.colors.black}
+      >
+        <Ultralead>
+          A city of incredible potential faces a crisis of opportunity.
+          <Text.span py={3} width={1} style={{ display: 'block' }} />
+          <Text.span color={theme.colors.alt}>We the students</Text.span>, in
+          order to welcome our underrepresented peers into the wonderful world
+          of technology, are organizing{' '}
+          <Text.span color={theme.colors.alt}>Hack&nbsp;Chicago</Text.span>.
+        </Ultralead>
       </Container>
-    </Box.header>
+    </Box.section>
     <Box.section>
-      <Container width={1} p={3} color={theme.colors.black}>
+      <Container width={1} p={3} pt={[5, 6]} color={theme.colors.black}>
         <Container maxWidth={48} mx={0}>
-          <Bannerline />
           <Headline color="alt">Welcome to the “hackathon.”</Headline>
           <Lead mt={3} maxWidth={48}>
             Hack Chicago is a 24-hour event where 350 programmers, artists,
             designers, & other high schoolers from across the Midwest will come
             to together to build apps & games. We’ll provide workshops,
-            mentorship, free meals & drinks, & places to sleep. The next
+            mentorship, free meals & drinks, and places to sleep. The next
             morning, judges will pick the best projects to demo and win prizes.
           </Lead>
         </Container>
-        <Grid mt={[4, 5]}>
+        <Grid>
           <Card>
             <Heading.h3 fontSize={[4, 5]} my={0}>
-              Building on years of building opportunity
+              Building on years of building opportunity.
             </Heading.h3>
             <Text fontSize={3} mt={2}>
               We began in 2017 as ChicagoHacks, then last year ran the Midwest’s
@@ -165,8 +144,7 @@ export default () => (
       width={1}
       id="faq"
     >
-      <Container pt={[4, 5]} px={3}>
-        <Bannerline mt={[3, 4]} />
+      <Container width={1} px={3} pt={[4, 5]}>
         <Headline fontSize={[6, 7]}>FAQ</Headline>
         <Grid>
           <Question
@@ -214,60 +192,13 @@ export default () => (
         </Grid>
       </Container>
     </Box.section>
-    {/*
-    <Box.section id="details">
-      <Container width={1} px={3} pt={[3, 4]} pb={[4, 5]}>
-        <Bannerline mt={0} />
-        <Headline color="alt">Get all the details.</Headline>
-        <Grid mt={4}>
-          <Card>
-            <Module
-              icon="event-code"
-              name="Schedule"
-              lg
-              iconColor={theme.colors.primary}
-              body="Saturday 12pm–Sunday 12pm, with a lot in between. Doors open 11am, June 22! Hacking starts at 12:30pm—sleep can wait :)"
-            >
-              <LinkOut.link
-                to="/schedule"
-                children="See the full schedule"
-                color={theme.colors.alt}
-              />
-            </Module>
-          </Card>
-          <Card>
-            <Module
-              lg
-              icon="friend"
-              name="Perks for all"
-              iconColor={theme.colors.primary}
-              body={
-                <>
-                  We’ll have T-shirts, stickers, prizes, sponsor goodies, & so
-                  much more. We welcome hardware, so we’re also providing
-                  Particle Photons for projects.
-                </>
-              }
-            />
-          </Card>
-        </Grid>
-      </Container>
-    </Box.section>
-    <Apply />
-    */}
     <Box.section>
-      <Container width={1} px={3} py={4}>
-        <Bannerline />
+      <Container width={1} px={3} py={[4, 5]}>
         <Headline color="alt">Sponsors</Headline>
-        <Text
-          fontSize={[3, 4]}
-          color={theme.colors.steel}
-          mt={3}
-          mb={4}
-          style={{ maxWidth: '36rem' }}
-        >
+        <Text fontSize={[3, 4]} color={theme.colors.steel} mt={3} mb={4}>
           Want to sponsor Hack Chicago and help hundreds of students experience
-          the magic of code?{' '}
+          the magic of code?
+          <br />
           <A
             href="mailto:theo@hackchicago.io"
             color={theme.colors.primary}
@@ -277,13 +208,7 @@ export default () => (
             Let’s chat
           </A>
         </Text>
-        <Headline
-          color={theme.colors.slate}
-          fontSize={[3, 4]}
-          caps
-          mt={[4, 5]}
-          pb={[3, 4]}
-        >
+        <Headline color={theme.colors.slate} fontSize={[3, 4]} caps my={[3, 4]}>
           Past sponsors
         </Headline>
         <Sponsors section="pastSponsors" />

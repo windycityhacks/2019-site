@@ -1,12 +1,10 @@
 import React from 'react'
 import { Box, Container, Heading, Text } from '@hackclub/design-system'
 import Leaders from 'components/Leaders'
-import Bannerline from 'components/Bannerline'
 
 const Leadership = () => (
-  <Box.section pt={[2, 3]} pb={[4, 5]} id="leadership">
-    <Container px={3}>
-      <Bannerline />
+  <Box.section id="leadership">
+    <Container width={1} pb={[4, 5]} px={3}>
       <Heading.h2 color="alt" fontSize={[5, 6]} mb={2}>
         Leadership
       </Heading.h2>

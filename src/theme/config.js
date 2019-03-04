@@ -12,8 +12,8 @@ export const grays = {
 
 export const brand = {
   primary: '#08e',
-  primaryDark: '#08e',
   primaryWash: '#d1e1fb',
+  primaryDark: '#005a9b',
   alt: '#f52',
   warning: '#f70',
   error: '#b23f42',
