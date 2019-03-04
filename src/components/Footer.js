@@ -1,5 +1,6 @@
 import React from 'react'
-import { Flex, Box, Heading, Icon, Link, Text } from '@hackclub/design-system'
+import { Flex, Box, Heading, Link, Text } from '@hackclub/design-system'
+import Icon from '@hackclub/icons'
 import { theme } from 'theme'
 import { urls } from 'data'
 
@@ -34,10 +35,10 @@ const Footer = ({ children }) => (
       wrap
       mb={3}
     >
-      <Service href={urls.twitter} service="twitter" />
       <Service href={urls.instagram} service="instagram" />
+      <Service href={urls.twitter} service="twitter" />
       <Service href={urls.facebook} service="facebook" />
-      <Service href={urls.messenger} service="message" />
+      <Service href={urls.messenger} service="messenger-fill" />
       <Service href={urls.email} service="email" />
     </Flex>
     <Text mx="auto" style={{ maxWidth: '18rem' }} fontSize={1}>
