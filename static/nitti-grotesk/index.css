@@ -1,0 +1,18 @@
+@font-face {
+  src: url('NittiGrotesk-Normal.woff2') format('woff2'),
+    url('NittiGrotesk-Normal.woff') format('woff');
+  font-family: NittiGrotesk;
+  font-weight: normal;
+}
+@font-face {
+  src: url('NittiGrotesk-Medium.woff2') format('woff2'),
+    url('NittiGrotesk-Medium.woff') format('woff');
+  font-family: NittiGrotesk;
+  font-weight: 500;
+}
+@font-face {
+  src: url('NittiGrotesk-Bold.woff2') format('woff2'),
+    url('NittiGrotesk-Bold.woff') format('woff');
+  font-family: NittiGrotesk;
+  font-weight: bold;
+}

@@ -1,0 +1,10 @@
+@font-face {
+  src: url('NittiMostroDiscoInline.woff') format('woff');
+  font-family: NittiMostroDiscoInline;
+  font-weight: bold;
+}
+@font-face {
+  src: url('NittiMostroShadow.woff') format('woff');
+  font-family: NittiMostroShadow;
+  font-weight: bold;
+}

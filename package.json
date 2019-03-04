@@ -1,0 +1,44 @@
+{
+  "name": "@hackchicago/site",
+  "description": "Chicago’s premier high school hackathon returns June 2019.",
+  "version": "0.0.1",
+  "author": "Lachlan Campbell <lachlan@hackchicago.io>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "start": "yarn run dev",
+    "fmt": "prettier \"{src/**,}/*.js\" --single-quote --no-semi --write"
+  },
+  "dependencies": {
+    "@hackclub/design-system": "^0.0.1-13",
+    "axios": "^0.18.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "formik": "^1.5.1",
+    "gatsby": "^2.1.19",
+    "gatsby-link": "^2.0.13",
+    "gatsby-plugin-favicon": "^3.1.5",
+    "gatsby-plugin-google-analytics": "^2.0.15",
+    "gatsby-plugin-lodash": "^3.0.4",
+    "gatsby-plugin-manifest": "^2.0.20",
+    "gatsby-plugin-netlify": "^2.0.11",
+    "gatsby-plugin-no-sourcemaps": "^2.0.2",
+    "gatsby-plugin-react-helmet": "^3.0.7",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sitemap": "^2.0.6",
+    "gatsby-plugin-styled-components": "^3.0.6",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^3.4.9",
+    "styled-system": "1.1.7",
+    "yup": "^0.26.10"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  }
+}
