@@ -28,7 +28,7 @@ module.exports = {
         display: 'minimal-ui'
       }
     },
-    {
+    /*{
       resolve: 'gatsby-plugin-favicon',
       options: {
         logo: './static/favicon.png',
@@ -45,7 +45,7 @@ module.exports = {
           windows: false
         }
       }
-    },
+    },*/
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
