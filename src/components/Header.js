@@ -94,9 +94,17 @@ export default class Header extends PureComponent {
           }}
         >
           <Heading.h1 fontSize={[6, 8, 9]}>Hack Chicago</Heading.h1>
-          <Heading.h2 fontSize={[5, 6]} my={3} style={{ maxWidth: '48rem' }}>
+          <Heading.h2
+            fontSize={[5, 6]}
+            mt={3}
+            mb={2}
+            style={{ maxWidth: '48rem' }}
+          >
             Welcome back to Chicago’s premier high school hackathon.
           </Heading.h2>
+          <Heading.h3 fontSize={[4, 5]} color={theme.colors.alt}>
+            June 22-23, 2019
+          </Heading.h3>
           <Card ml={[-3, -4]}>
             <EmailForm />
           </Card>
