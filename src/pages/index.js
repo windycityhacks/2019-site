@@ -85,7 +85,7 @@ export default () => (
           A city of incredible potential faces a crisis of opportunity.
           <Text.span py={3} width={1} style={{ display: 'block' }} />
           <Text.span color={theme.colors.alt}>We the students</Text.span>, in
-          order to welcome our underrepresented peers into the wonderful world
+          order to welcome our peers into the wonderful world
           of technology, are organizing{' '}
           <Text.span color={theme.colors.alt}>Hack&nbsp;Chicago</Text.span>.
         </Ultralead>
@@ -125,13 +125,14 @@ export default () => (
           />
           <Card>
             <Heading.h3 f={[4, 5]} my={0}>
-              Hacking‽ Is that safe?
+              A place for everyone.
             </Heading.h3>
             <Text f={3} mt={2}>
-              Hold up! No, we’re not “hacking” servers or databases. The word is
-              being constructively re-defined as building things—apps, games,
-              websites, etc. At Hack Chicago, it’s all safe, supervised, &
-              entirely educational.
+              Underrepresented students are systematically discouraged from
+              pursuing tech; Hack Chicago provides a supportive community for
+              women, minorities, and LGBTQ+ students, & gives them the resources to
+              make amazing things. No matter who you are, you're welcome here—and you'll
+              surprise yourself by what you can accomplish. 💙
             </Text>
           </Card>
         </Grid>
@@ -155,6 +156,10 @@ export default () => (
             body="Any current student grades 8–12. If you’re under/over that age, send us a chat message (in the bottom right corner) & we’ll see what we can do."
           />
           <Question
+            name="Hacking‽ Is that safe?"
+            body="Hold up! No, we’re not “hacking” servers or databases. The word is being constructively re-defined as building things—apps, games, websites, etc. At Hack Chicago, it’s all safe, supervised, & entirely educational."
+          />
+          <Question
             name="What if I’m new to coding?"
             body="At Hack Chicago, complete beginners are not only welcome, but expected! Learn as you go with our intro workshops & mentors."
           />
@@ -172,7 +177,11 @@ export default () => (
           />
           <Question
             name="What should I bring?"
-            body="Student ID, computer, chargers, anything for your hack (e.g. hardware), toiletries, & a sleeping bag (if you plan on sleeping)."
+            body="Plan to bring a student ID, computer, chargers, anything for your hack (e.g. hardware), toiletries, & a sleeping bag (if you plan on sleeping)."
+          />
+          <Question
+            name="Where will I sleep?"
+            body="We will provide quiet places to sleep at the event, and we will turn lights off after the midnight snack. You'll definitely be able to get some sleep if you need it."
           />
           <Question
             name="Who runs this? Is it supervised?"
