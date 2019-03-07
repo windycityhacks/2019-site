@@ -10,7 +10,6 @@ import {
 import { theme } from 'theme'
 import { Link } from 'gatsby'
 // import Action from 'components/Action'
-// import Apply from 'components/Apply'
 // import Calendar from 'components/Calendar'
 import Card from 'components/Card'
 import EmailForm from 'components/EmailForm'
@@ -27,8 +26,10 @@ import Sponsors from 'components/Sponsors'
 import Video from 'components/Video'
 
 const Lead = styled(Container.withComponent(Text)).attrs({
-  fontSize: 4,
-  mx: 'auto'
+  color: 'black',
+  fontSize: [3, 4],
+  mt: 3,
+  mb: 4
 })``
 
 const Ultralead = styled(Text).attrs({ fontSize: [5, 6, 7] })`
@@ -39,7 +40,7 @@ const Ultralead = styled(Text).attrs({ fontSize: [5, 6, 7] })`
   max-width: 52rem;
 `
 
-const Grid = styled(Container).attrs({ maxWidth: 72, mt: [3, 4] })`
+const Grid = styled(Container).attrs({ maxWidth: 72 })`
   display: grid;
   grid-gap: ${theme.space[3]}px;
   width: 100%;
@@ -95,7 +96,7 @@ export default () => (
       <Container width={1} p={3} pt={[5, 6]} color={theme.colors.black}>
         <Container maxWidth={48} mx={0}>
           <Headline color="alt">Welcome to the “hackathon.”</Headline>
-          <Lead mt={3} maxWidth={48}>
+          <Lead>
             Hack Chicago is a 24-hour event where 350 programmers, artists,
             designers, & other high schoolers from across the Midwest will come
             to together to build apps & games. We’ll provide workshops,
@@ -124,15 +125,15 @@ export default () => (
             src="/2018/ceremony.jpg"
           />
           <Card>
-            <Heading.h3 f={[4, 5]} my={0}>
+            <Heading.h3 fontSize={[4, 5]} my={0}>
               A place for everyone.
             </Heading.h3>
-            <Text f={3} mt={2}>
+            <Text fontSize={3} mt={2}>
               Underrepresented students are systematically discouraged from
               pursuing tech; Hack Chicago provides a supportive community for
               women, minorities, and LGBTQ+ students, & gives them the resources to
-              make amazing things. No matter who you are, you’re welcome here—and you’ll
-              surprise yourself by what you can accomplish. 💙
+              make amazing things. No matter who you are, you’re welcome here—and
+              you’ll surprise yourself by what you can accomplish. 💙
             </Text>
           </Card>
         </Grid>
@@ -177,7 +178,7 @@ export default () => (
           />
           <Question
             name="What should I bring?"
-            body="Plan to bring a student ID, computer, chargers, anything for your hack (e.g. hardware), toiletries, & a sleeping bag (if you plan on sleeping)."
+            body="Plan to bring a student ID, computer (any kind), chargers, anything for your hack (e.g. hardware), toiletries, & a sleeping bag (if you plan on sleeping)."
           />
           <Question
             name="Where will I sleep?"
@@ -203,7 +204,7 @@ export default () => (
     <Box.section>
       <Container width={1} px={3} py={[4, 5]}>
         <Headline color="alt">Sponsors</Headline>
-        <Text fontSize={[3, 4]} color={theme.colors.steel} mt={3} mb={4}>
+        <Lead>
           Want to sponsor Hack Chicago and help hundreds of students experience
           the magic of code?
           <br />
@@ -215,7 +216,7 @@ export default () => (
           >
             Let’s chat
           </A>
-        </Text>
+        </Lead>
         <Headline color={theme.colors.slate} fontSize={[3, 4]} caps my={[3, 4]}>
           Past sponsors
         </Headline>
@@ -230,7 +231,8 @@ export default () => (
         >
           Additional support from
         </Headline>
-        <Sponsors section="additionalSupport" /> */}
+        <Sponsors section="additionalSupport" />
+        */}
       </Container>
     </Box.section>
     <Leadership />

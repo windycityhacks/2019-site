@@ -13,7 +13,6 @@ module.exports = {
         components: path.join(__dirname, 'src/components'),
         pages: path.join(__dirname, 'src/pages'),
         theme: path.join(__dirname, 'src/theme'),
-        track: path.join(__dirname, 'src/track'),
         data: path.join(__dirname, 'src/data.json')
       }
     },
@@ -24,7 +23,7 @@ module.exports = {
         short_name: 'hackchicago',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#2b34b6',
+        theme_color: '#08e',
         display: 'minimal-ui'
       }
     },
