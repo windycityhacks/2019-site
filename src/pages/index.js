@@ -182,7 +182,7 @@ export default () => (
           />
           <Question
             name="Where will I sleep?"
-            body="We will provide quiet places to sleep at the event, and we will turn lights off after the midnight snack. You'll definitely be able to get some sleep if you need it."
+            body="We will provide quiet places to sleep at the event, and we will turn lights off after the midnight snack. We'll make sure you're able to get some sleep if you need it!"
           />
           <Question
             name="Who runs this? Is it supervised?"
