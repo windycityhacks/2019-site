@@ -22,9 +22,6 @@ export const brand = {
   muted: grays.grey
 }
 
-// for DS input
-brand.blue = [brand.primaryWash, brand.primaryWash, brand.primaryWash]
-
 export const colors = {
   ...grays,
   ...brand
@@ -35,10 +32,8 @@ theme.colors = colors
 const baseFamily =
   '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif'
 
-const mono = '"Menlo"'
 const sans = '"NittiGrotesk"'
 
 theme.font = `${sans},${baseFamily}`
-theme.mono = `${mono},${baseFamily}`
 
 export default theme
