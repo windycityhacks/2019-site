@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Container, Box, Heading, theme } from '@hackclub/design-system'
+import { Box, Container, Heading, Text, theme } from '@hackclub/design-system'
 import Card from 'components/Card'
 import EmailForm from 'components/EmailForm'
 
@@ -89,7 +89,7 @@ export default class Header extends PureComponent {
           px={3}
           style={{
             willChange: 'transform',
-            transform: `translateY(-${Math.max(scroll) * 0.5}px)`,
+            transform: `translateY(-${Math.max(scroll / 2)}px)`,
             opacity: Math.max(1 - scroll / 128, 0)
           }}
         >
@@ -103,7 +103,7 @@ export default class Header extends PureComponent {
             Welcome back to Chicago’s premier high school hackathon.
           </Heading.h2>
           <Heading.h3 fontSize={[4, 5]} color={theme.colors.alt}>
-            June 22-23, 2019 — Location TBA
+            June 22-23, 2019 <Text.span color="muted">— Location TBA</Text.span>
           </Heading.h3>
           <Card ml={[-3, -4]}>
             <EmailForm />
