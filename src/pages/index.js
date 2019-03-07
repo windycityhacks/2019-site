@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import {
   Box,
   Container,
@@ -131,7 +131,7 @@ export default () => (
               Underrepresented students are systematically discouraged from
               pursuing tech; Hack Chicago provides a supportive community for
               women, minorities, and LGBTQ+ students, & gives them the resources to
-              make amazing things. No matter who you are, you're welcome here—and you'll
+              make amazing things. No matter who you are, you’re welcome here—and you’ll
               surprise yourself by what you can accomplish. 💙
             </Text>
           </Card>
