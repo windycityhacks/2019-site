@@ -84,17 +84,17 @@ export default () => (
         <Ultralead>
           A city of incredible potential faces a crisis of opportunity.
           <Text.span py={3} width={1} style={{ display: 'block' }} />
-          <Text.span color={theme.colors.alt}>We the students</Text.span>, in
+          <Text.span color={theme.colors.alt}>We the students,</Text.span> in
           order to welcome our underrepresented peers into the wonderful world
           of technology, are organizing{' '}
-          <Text.span color={theme.colors.alt}>Hack&nbsp;Chicago</Text.span>.
+          <Text.span color={theme.colors.alt}>Hack&nbsp;Chicago.</Text.span>
         </Ultralead>
       </Container>
     </Box.section>
     <Box.section>
       <Container width={1} p={3} pt={[5, 6]} color={theme.colors.black}>
         <Container maxWidth={48} mx={0}>
-          <Headline color="alt">Welcome to the “hackathon.”</Headline>
+          <Headline color="alt">Welcome to the “hackathon”.</Headline>
           <Lead mt={3} maxWidth={48}>
             Hack Chicago is a 24-hour event where 350 programmers, artists,
             designers, & other high schoolers from across the Midwest will come
