@@ -22,6 +22,9 @@ export const brand = {
   muted: grays.grey
 }
 
+// for DS input
+brand.blue = [brand.primaryWash, brand.primaryWash, brand.primaryWash]
+
 export const colors = {
   ...grays,
   ...brand
