@@ -102,7 +102,7 @@ export default class Header extends PureComponent {
           >
             Welcome back to Chicago’s premier high school hackathon.
           </Heading.h2>
-          <Heading.h3 fontSize={[4, 5]} color={theme.colors.alt}>
+          <Heading.h3 fontSize={[3, 5]} color={theme.colors.alt}>
             June 22-23, 2019 <Text.span color="muted">— Location TBA</Text.span>
           </Heading.h3>
           <Card ml={[-3, -4]}>

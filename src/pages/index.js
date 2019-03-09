@@ -86,8 +86,8 @@ export default () => (
           A city of incredible potential faces a crisis of opportunity.
           <Text.span py={3} width={1} style={{ display: 'block' }} />
           <Text.span color={theme.colors.alt}>We the students</Text.span>, in
-          order to welcome our peers into the wonderful world
-          of technology, are organizing{' '}
+          order to welcome our peers into the wonderful world of technology, are
+          organizing{' '}
           <Text.span color={theme.colors.alt}>Hack&nbsp;Chicago</Text.span>.
         </Ultralead>
       </Container>
@@ -131,9 +131,12 @@ export default () => (
             <Text fontSize={3} mt={2}>
               Underrepresented students are systematically discouraged from
               pursuing tech; Hack Chicago provides a supportive community for
-              women, minorities, and LGBTQ+ students, & gives them the resources to
-              make amazing things. No matter who you are, you’re welcome here—and
-              you’ll surprise yourself by what you can accomplish. 💙
+              women, minorities, and LGBTQ+ students, & gives them the resources
+              to make amazing things. No matter who you are, you’re welcome
+              here—and you’ll surprise yourself by what you can accomplish.{' '}
+              <span role="img" aria-label="Blue heart emoji">
+                💙
+              </span>
             </Text>
           </Card>
         </Grid>
