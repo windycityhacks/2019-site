@@ -8,7 +8,7 @@ import BG from 'components/BG'
 import Nav from 'components/Nav'
 import Action from 'components/Action'
 
-const MostroHeading = styled(Heading.h1).attrs({
+const NittiMostroHeading = styled(Heading.h1).attrs({
   color: theme.colors.white,
   fontSize: [128, 256]
 })`
@@ -37,8 +37,8 @@ export default () => (
   <Layout>
     <Nav />
     <BG color="primaryDark" />
-    <Container px={3} py={5} align="center">
-      <MostroHeading>404!</MostroHeading>
+    <Container px={3} py={[5, 0]} align="center">
+      <NittiMostroHeading>404!</NittiMostroHeading>
       <Text color={theme.colors.white} mt={-3} fontSize={[4, 5]}>
         Sorry, that page isn’t here.{' '}
         <span role="img" aria-label="Blue heart emoji">
