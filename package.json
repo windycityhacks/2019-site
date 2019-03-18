@@ -1,8 +1,11 @@
 {
-  "name": "@hackchicago/site",
+  "name": "@windyhacks/site",
   "description": "Chicago’s premier high school hackathon returns June 2019.",
   "version": "0.0.1",
-  "author": "Lachlan Campbell <lachlan@hackchicago.io>",
+  "contributors": [
+    "Lachlan Campbell <lachlan@windyhacks.com> (https://lachlanjc.me)",
+    "Zane Davis-Barrs <zane@windyhacks.com> (http://zane.sh/)"
+  ],
   "license": "MIT",
   "private": true,
   "scripts": {

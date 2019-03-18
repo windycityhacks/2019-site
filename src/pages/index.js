@@ -37,7 +37,7 @@ const Ultralead = styled(Text).attrs({ fontSize: [5, 6, 7] })`
   line-height: 1.0625;
   font-weight: bold;
   letter-spacing: -0.01em;
-  max-width: 52rem;
+  max-width: 56rem;
 `
 
 const Grid = styled(Container).attrs({ maxWidth: 72 })`
@@ -88,7 +88,10 @@ export default () => (
           <Text.span color={theme.colors.alt}>We the students</Text.span>, in
           order to welcome our peers into the wonderful world of technology, are
           organizing{' '}
-          <Text.span color={theme.colors.alt}>Hack&nbsp;Chicago</Text.span>.
+          <Text.span color={theme.colors.alt}>
+            Windy&nbsp;City&nbsp;Hacks
+          </Text.span>
+          .
         </Ultralead>
       </Container>
     </Box.section>
@@ -97,7 +100,7 @@ export default () => (
         <Container maxWidth={48} mx={0}>
           <Headline color="alt">Welcome to the “hackathon.”</Headline>
           <Lead>
-            Hack Chicago is a 24-hour event where 350 programmers, artists,
+            Windy City Hacks is a 24-hour event where 350 programmers, artists,
             designers, & other high schoolers from across the Midwest will come
             to together to build apps & games. We’ll provide workshops,
             mentorship, free meals & drinks, and places to sleep. The next
@@ -110,10 +113,11 @@ export default () => (
               Building on years of building opportunity.
             </Heading.h3>
             <Text fontSize={3} mt={2}>
-              We began in 2017 as ChicagoHacks, then last year ran the Midwest’s
-              largest HS hackathon ever with 250+ students.
+              Our team has been running hackathons for years, including Hack
+              Chicago, Hack Pennsylvania, and more, reaching a combined total of
+              1000+ students.
             </Text>
-            <LinkOut href="https://2018.hackchicago.io">
+            <LinkOut href="https://2018.hackchicago.com">
               See last year’s event
             </LinkOut>
           </Card>
@@ -130,10 +134,11 @@ export default () => (
             </Heading.h3>
             <Text fontSize={3} mt={2}>
               Underrepresented students are systematically discouraged from
-              pursuing tech; Hack Chicago provides a supportive community for
-              women, minorities, and LGBTQ+ students, & gives them the resources
-              to make amazing things. No matter who you are, you’re welcome
-              here—and you’ll surprise yourself by what you can accomplish.{' '}
+              pursuing tech; Windy City Hacks provides a supportive community
+              for women, minorities, and LGBTQ+ students, & gives them the
+              resources to make amazing things. No matter who you are, you’re
+              welcome here—and you’ll surprise yourself by what you can
+              accomplish.{' '}
               <span role="img" aria-label="Blue heart emoji">
                 💙
               </span>
@@ -161,15 +166,15 @@ export default () => (
           />
           <Question
             name="Hacking‽ Is that safe?"
-            body="Hold up! No, we’re not “hacking” servers or databases. The word is being constructively re-defined as building things—apps, games, websites, etc. At Hack Chicago, it’s all safe, supervised, & entirely educational."
+            body="Hold up! No, we’re not “hacking” servers or databases. The word is being constructively re-defined as building things—apps, games, websites, etc. At Windy City Hacks, it’s all safe, supervised, & entirely educational."
           />
           <Question
             name="What if I’m new to coding?"
-            body="At Hack Chicago, complete beginners are not only welcome, but expected! Learn as you go with our intro workshops & mentors."
+            body="At Windy City Hacks, complete beginners are not only welcome, but expected! Learn as you go with our intro workshops & mentors."
           />
           <Question
             name="What if I can already code?"
-            body="Hack Chicago is for you, too! We welcome (& have prizes for) absolute beginners, experts, & everyone in between."
+            body="Windy City Hacks is for you, too! We welcome (& have prizes for) absolute beginners, experts, & everyone in between."
           />
           <Question
             name="Do I need a team?"
@@ -208,11 +213,11 @@ export default () => (
       <Container width={1} px={3} py={[4, 5]}>
         <Headline color="alt">Sponsors</Headline>
         <Lead>
-          Want to sponsor Hack Chicago and help hundreds of students experience
-          the magic of code?
+          Want to sponsor Windy City Hacks and help hundreds of students
+          experience the magic of code?
           <br />
           <A
-            href="mailto:theo@hackchicago.io"
+            href="mailto:theo@windyhacks.com"
             color={theme.colors.primary}
             hoverline
             chevronRight
@@ -220,10 +225,6 @@ export default () => (
             Let’s chat
           </A>
         </Lead>
-        <Headline color={theme.colors.slate} fontSize={[3, 4]} caps my={[3, 4]}>
-          Past sponsors
-        </Headline>
-        <Sponsors section="pastSponsors" />
         {/*
         <Headline
           color={theme.colors.slate}

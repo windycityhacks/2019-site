@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://hackchicago.io/sitemap.xml
+Sitemap: https://windyhacks.com/sitemap.xml

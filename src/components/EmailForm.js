@@ -94,7 +94,7 @@ export default class EmailForm extends React.Component {
                   type="email"
                   name="email"
                   label="Email"
-                  placeholder="amanda@hackchicago.io"
+                  placeholder="amanda@windyhacks.com"
                   error={errors.email}
                   value={values.email}
                   onChange={handleChange}

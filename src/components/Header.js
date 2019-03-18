@@ -93,7 +93,7 @@ export default class Header extends PureComponent {
             opacity: Math.max(1 - scroll / 128, 0)
           }}
         >
-          <Heading.h1 fontSize={[6, 8, 9]}>Hack Chicago</Heading.h1>
+          <Heading.h1 fontSize={[6, 8, 9]}>Windy City Hacks</Heading.h1>
           <Heading.h2
             fontSize={[5, 6]}
             mt={3}

@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    name: 'hackchicago',
-    siteUrl: 'https://hackchicago.io'
+    name: 'windyhacks',
+    siteUrl: 'https://windyhacks.com'
   },
   plugins: [
     {
@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'hackchicago',
-        short_name: 'hackchicago',
+        name: 'windyhacks',
+        short_name: 'windyhacks',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#08e',

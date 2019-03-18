@@ -1,44 +1,44 @@
 {
-  "name": "Hack Chicago",
-  "title": "Hack Chicago – Chicago’s premier high school hackathon",
-  "description": "Register today for 24 hours of coding, fun, free food, and prizes. Hack Chicago returns June 22, 2019.",
-  "url": "https://hackchicago.io",
-  "twitter": "@hackchicago",
-  "img": "https://hackchicago.io/card.png",
+  "name": "Windy City Hacks",
+  "title": "Windy City Hacks – Chicago’s premier high school hackathon",
+  "description": "Register today for 24 hours of coding, fun, free food, and prizes. Windy City Hacks returns June 22, 2019.",
+  "url": "https://windyhacks.com",
+  "twitter": "@windyhacks",
+  "img": "https://windyhacks.com/card.png",
   "urls": {
-    "twitter": "https://twitter.com/hackchicago19",
-    "instagram": "https://www.instagram.com/hackchicago",
-    "facebook": "https://fb.me/hackchicago",
-    "messenger": "https://m.me/hackchicago",
-    "email": "mailto:hello@hackchicago.io"
+    "twitter": "https://twitter.com/windyhacks",
+    "instagram": "https://www.instagram.com/windycityhacks",
+    "facebook": "https://fb.me/windyhacks",
+    "messenger": "https://m.me/windyhacks",
+    "email": "mailto:hello@windyhacks.com"
   },
   "org": {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "hackchicago",
-    "url": "https://hackchicago.io",
-    "logo": "https://hackchicago.io/flag.png",
+    "name": "Windy City Hacks",
+    "url": "https://windyhacks.com",
+    "logo": "https://windyhacks.com/flag.png",
     "sameAs": [
-      "https://twitter.com/hackchicago19",
-      "https://www.instagram.com/hackchicago",
-      "https://www.facebook.com/hackchicago"
+      "https://twitter.com/windyhacks",
+      "https://www.instagram.com/windyhacks",
+      "https://www.facebook.com/windyhacks"
     ],
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "email": "hello@hackchicago.io",
+        "email": "hello@windyhacks.com",
         "contactType": "customer support",
-        "url": "https://hackchicago.io"
+        "url": "https://windyhacks.com"
       }
     ]
   },
   "event": {
     "@context": "http://schema.org/",
     "@type": "Event",
-    "name": "Hack Chicago",
-    "description": "Register today for 24 hours of coding, fun, free food, and prizes. Hack Chicago returns June 22, 2019.",
-    "url": "https://hackchicago.io",
-    "image": "https://hackchicago.io/flag.png",
+    "name": "Windy City Hacks",
+    "description": "Register today for 24 hours of coding, fun, free food, and prizes. Windy City Hacks returns June 22, 2019.",
+    "url": "https://windyhacks.com",
+    "image": "https://windyhacks.com/flag.png",
     "location": {
       "@type": "Place",
       "address": {
@@ -58,76 +58,13 @@
   },
   "leaders": [
     { "name": "Matthew Stanciu", "pronouns": "he/him" },
-    { "name": "Lachlan Campbell", "pronouns": "they/them" },
-    { "name": "Theo Bleier", "pronouns": "he/him" },
     { "name": "Zane Davis-Barrs", "pronouns": "he/him" },
-    { "name": "Michael Parekh", "pronouns": "he/him" },
-    { "name": "Ava Scherocman", "pronouns": "she/her" },
     { "name": "Amogh Chaubey", "pronouns": "he/him" },
-    { "name": "Joy Liu", "pronouns": "she/her" },
-    { "name": "Mingjie Jiang", "pronouns": "he/him" }
-  ],
-  "pastSponsors": [
-    {
-      "name": "McDonald’s",
-      "link": "https://www.mcdonalds.com",
-      "image": "mcdonalds.png"
-    },
-    {
-      "name": "Paylocity",
-      "link": "https://www.paylocity.com",
-      "image": "paylocity.svg"
-    },
-    {
-      "name": "Balsamiq",
-      "link": "https://balsamiq.com",
-      "image": "balsamiq.svg"
-    },
-    {
-      "name": "Morningstar",
-      "link": "https://www.morningstar.com",
-      "image": "morningstar.png"
-    },
-    {
-      "name": "Nvidia",
-      "link": "https://www.nvidia.com",
-      "image": "nvidia.png"
-    },
-    {
-      "name": "Bose",
-      "link": "https://www.bose.com",
-      "image": "bose.png"
-    },
-    {
-      "name": "Flexera",
-      "link": "https://www.flexera.com",
-      "image": "flexera.png"
-    },
-    {
-      "name": "Neighborhoods.com",
-      "link": "https://www.neighborhoods.com",
-      "image": "neighborhoods.png"
-    },
-    {
-      "name": "Repl.it",
-      "link": "https://repl.it",
-      "image": "replit.png"
-    },
-    {
-      "name": "Belvedere Trading",
-      "link": "https://www.belvederetrading.com",
-      "image": "belvedere.png"
-    },
-    {
-      "name": "Civis Analytics",
-      "link": "https://www.civisanalytics.com",
-      "image": "civis.png"
-    },
-    {
-      "name": "Tastytrade",
-      "link": "https://www.tastytrade.com/tt",
-      "image": "tastytrade.svg"
-    }
+    { "name": "Lachlan Campbell", "pronouns": "they/them" },
+    { "name": "Ava Scherocman", "pronouns": "she/her" },
+    { "name": "Theo Bleier", "pronouns": "he/him" },
+    { "name": "Michael Parekh", "pronouns": "he/him" },
+    { "name": "Joy Liu", "pronouns": "she/her" }
   ],
   "sponsors": [],
   "additionalSupport": []

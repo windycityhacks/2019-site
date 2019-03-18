@@ -52,7 +52,7 @@ const Leader = ({ name, pronouns }) => (
       <EmailButton
         circle
         title={`Email ${username(name)}`}
-        href={`mailto:${username(name)}@hackchicago.io`}
+        href={`mailto:${username(name)}@windyhacks.com`}
         children={<Icon glyph="email" size={24} />}
       />
     </Wrap>

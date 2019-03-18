@@ -1,3 +1,3 @@
-# Hack Chicago
+# Windy City Hacks
 
-[**hackchicago.io**](https://hackchicago.io)
+[**windyhacks.com**](https://windyhacks.com)
