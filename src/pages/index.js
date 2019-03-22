@@ -117,7 +117,7 @@ export default () => (
               Chicago, Hack Pennsylvania, and more, reaching a combined total of
               1000+ students.
             </Text>
-            <LinkOut href="https://hackchicago.com">
+            <LinkOut href="https://hackchicago.io">
               See last year’s event
             </LinkOut>
           </Card>
