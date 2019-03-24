@@ -36,11 +36,15 @@
     "@context": "http://schema.org/",
     "@type": "Event",
     "name": "Windy City Hacks",
+    "startDate": "2019-06-22T19:00",
+    "endDate": "2019-06-23T19:00",
     "description": "Register today for 24 hours of coding, fun, free food, and prizes. Windy City Hacks returns June 22, 2019.",
+    "isAccessibleForFree": true,
     "url": "https://windyhacks.com",
     "image": "https://windyhacks.com/flag.png",
     "location": {
       "@type": "Place",
+      "name": "Venue TBA",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Chicago",
@@ -52,9 +56,20 @@
       "name": "Hack Club",
       "url": "https://hackclub.com"
     },
-    "startDate": "2019-06-22T12:00",
-    "endDate": "2019-00-23T12:00",
-    "isAccessibleForFree": true
+    "offers": {
+      "@type": "Offer",
+      "name": "Free Admission",
+      "url": "https://windyhacks.com",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2019-04-01",
+      "validThrough": "2019-06-23"
+    },
+    "performer": {
+      "@type": "PerformingGroup",
+      "name": "Windy City Hacks Team"
+    }
   },
   "leaders": [
     { "name": "Matthew Stanciu", "pronouns": "he/him" },
