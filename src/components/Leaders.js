@@ -40,7 +40,7 @@ const EmailButton = styled(Button.withComponent('a')).attrs({
     right: 0;
   }
 `
-const LeaderName = styled(Text).attrs({ bold: true })`
+const LeaderName = styled(Text).attrs({ fontSize: [3, 4], mt: 2 })`
   line-height: 1.125;
 `
 const username = a => a.split(' ')[0].toLowerCase()
@@ -56,7 +56,7 @@ const Leader = ({ name, pronouns }) => (
       />
     </Wrap>
     <Box align="left">
-      <LeaderName fontSize={[3, 4]} mt={2} children={name} />
+      <LeaderName children={name} />
       <Text color={theme.colors.muted} fontSize={2} children={pronouns} />
     </Box>
   </Flex>
