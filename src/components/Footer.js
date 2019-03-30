@@ -41,7 +41,7 @@ const Footer = ({ children }) => (
       <Service href={urls.messenger} service="messenger-fill" />
       <Service href={urls.email} service="email" />
     </Flex>
-    <Text mx="auto" style={{ maxWidth: '18rem' }} fontSize={1}>
+    <Text mx="auto" style={{ maxWidth: '20rem' }} fontSize={1}>
       Fiscally sponsored by The Hack Foundation. Nonprofit EIN: 81-2908499.
     </Text>
   </Box.footer>
