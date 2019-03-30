@@ -22,7 +22,7 @@ import Leadership from 'components/Leadership'
 // import Module from 'components/Module'
 import Nav from 'components/Nav'
 import Photo from 'components/Photo'
-import Sponsors from 'components/Sponsors'
+// import Sponsors from 'components/Sponsors'
 import Video from 'components/Video'
 
 const Lead = styled(Container.withComponent(Text)).attrs({
@@ -34,9 +34,9 @@ const Lead = styled(Container.withComponent(Text)).attrs({
 
 const Ultralead = styled(Text).attrs({ fontSize: [5, 6, 7] })`
   color: ${theme.colors.primary};
-  line-height: 1.0625;
+  line-height: 1.125;
   font-weight: bold;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
   max-width: 56rem;
 `
 
@@ -51,8 +51,8 @@ const Grid = styled(Container).attrs({ maxWidth: 72 })`
 `
 const Question = ({ name, body, ...props }) => (
   <Card {...props}>
-    <Heading.h3 fontSize={4} caps mt={0} mb={[1, 2]} children={name} />
-    <Text fontSize={3} color="black" my={0} children={body} />
+    <Heading.h3 fontSize={4} mt={0} mb={2} children={name} />
+    <Text fontSize={2} color="black" my={0} children={body} />
   </Card>
 )
 
@@ -72,31 +72,29 @@ A.link = styled(A.withComponent(Link))``
 
 export default () => (
   <Layout>
-    <Nav />
+    {/* <Nav /> */}
     <Header />
-    <Box.section bg={theme.colors.primaryWash}>
+    <Box.section bg="primaryWash">
       <Container
+        maxWidth={72}
         width={1}
         px={3}
         pt={[4, 5]}
         pb={[5, 6]}
-        color={theme.colors.black}
+        color="black"
       >
         <Ultralead>
           A city of incredible potential faces a crisis of opportunity.
           <Text.span py={3} width={1} style={{ display: 'block' }} />
-          <Text.span color={theme.colors.alt}>We the students</Text.span>, in
-          order to welcome our peers into the wonderful world of technology, are
+          <Text.span color="alt">We the students</Text.span>, in order to
+          welcome our peers into the wonderful world of technology, are
           organizing{' '}
-          <Text.span color={theme.colors.alt}>
-            Windy&nbsp;City&nbsp;Hacks
-          </Text.span>
-          .
+          <Text.span color="alt">Windy&nbsp;City&nbsp;Hacks</Text.span>.
         </Ultralead>
       </Container>
     </Box.section>
     <Box.section>
-      <Container width={1} p={3} pt={[5, 6]} color={theme.colors.black}>
+      <Container maxWidth={72} width={1} p={3} pt={[5, 6]} color="black">
         <Container maxWidth={48} mx={0}>
           <Headline color="alt">Welcome to the “hackathon.”</Headline>
           <Lead>
@@ -110,10 +108,10 @@ export default () => (
         <Grid>
           <Card>
             <Heading.h3 fontSize={[4, 5]} my={0}>
-              Building on years of building opportunity.
+              Building on years of building&nbsp;opportunity.
             </Heading.h3>
-            <Text fontSize={3} mt={2}>
-              Our team has been running hackathons for years, including Hack
+            <Text fontSize={3} mt={[2, 3]}>
+              Our team has been running hackathons for years, incl. Hack
               Chicago, Hack Pennsylvania, and more, reaching a combined total of
               1000+ students.
             </Text>
@@ -132,7 +130,7 @@ export default () => (
             <Heading.h3 fontSize={[4, 5]} my={0}>
               A place for everyone.
             </Heading.h3>
-            <Text fontSize={3} mt={2}>
+            <Text fontSize={3} mt={[2, 3]}>
               Underrepresented students are systematically discouraged from
               pursuing tech; Windy City Hacks provides a supportive community
               for women, minorities, and LGBTQ+ students, & gives them the
@@ -147,14 +145,11 @@ export default () => (
         </Grid>
       </Container>
     </Box.section>
-    <Box.section
-      bg={theme.colors.white}
-      color={theme.colors.black}
-      width={1}
-      id="faq"
-    >
-      <Container width={1} px={3} pt={[4, 5]}>
-        <Headline fontSize={[6, 7]}>FAQ</Headline>
+    <Box.section id="faq">
+      <Container maxWidth={72} width={1} px={3} pt={[4, 5]} color="black">
+        <Headline fontSize={[6, 7]} mb={4}>
+          FAQ
+        </Headline>
         <Grid>
           <Question
             name="How much does it cost?"
@@ -210,12 +205,11 @@ export default () => (
       </Container>
     </Box.section>
     <Box.section>
-      <Container width={1} px={3} py={[4, 5]}>
+      <Container maxWidth={72} width={1} px={3} py={[4, 5]}>
         <Headline color="alt">Sponsors</Headline>
-        <Lead>
-          Want to sponsor Windy City Hacks and help hundreds of students
-          experience the magic of code?
-          <br />
+        <Lead maxWidth={48} mx={0}>
+          Want to sponsor Windy City Hacks & help hundreds of students
+          experience the magic of code?{' '}
           <A
             href="mailto:theo@windyhacks.com"
             color={theme.colors.primary}
@@ -241,7 +235,7 @@ export default () => (
     </Box.section>
     <Leadership />
     <Box.section bg={theme.colors.snow}>
-      <Container width={1} px={3} py={[4, 5]}>
+      <Container maxWidth={72} width={1} px={3} py={[4, 5]}>
         <EmailForm />
       </Container>
     </Box.section>

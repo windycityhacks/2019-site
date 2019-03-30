@@ -15,6 +15,7 @@ const Base = styled(Box.withComponent('header')).attrs({
 
 const Inner = styled(Container.withComponent(Flex)).attrs({
   px: 3,
+  maxWidth: 64,
   justify: 'space-between',
   align: 'center',
   mx: 'auto',

@@ -8,6 +8,7 @@ const Headline = styled(Heading.h2).attrs({
 })`
   font-weight: bold;
   line-height: 1.125;
+  letter-spacing: -0.03em;
 `
 
 export default Headline

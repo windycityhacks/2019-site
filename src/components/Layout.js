@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import data from 'data'
 import { theme } from 'theme'
 import ThemeProvider from 'theme'
-import '../../static/nitti-grotesk/index.css'
+import '../../static/fonts.css'
 
 const { name, title, description, img, url, org, event } = data
 

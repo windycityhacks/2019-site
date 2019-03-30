@@ -34,9 +34,11 @@ const Base = styled(Box.section)`
 
   h1 {
     line-height: 0.875;
+    letter-spacing: -0.04em;
   }
   h2 {
     line-height: 1.125;
+    letter-spacing: -0.04em;
   }
   input {
     background: ${theme.colors.white};
@@ -82,9 +84,10 @@ export default class Header extends PureComponent {
   render() {
     const { scroll } = this.state
     return (
-      <Base color={theme.colors.primary} pt={[3, 4]} pb={[5, 6]}>
+      <Base color="primary" py={[5, 6]} align="center">
         <Background />
         <Container
+          maxWidth={72}
           width={1}
           px={3}
           style={{
@@ -93,17 +96,21 @@ export default class Header extends PureComponent {
             opacity: Math.max(1 - scroll / 128, 0)
           }}
         >
-          <Heading.h1 fontSize={[6, 8, 9]}>Windy City Hacks</Heading.h1>
+          <Heading.h1 color="primaryDark" fontSize={[7, 8, 9]}>
+            Windy City Hacks
+          </Heading.h1>
           <Heading.h2
+            color="primaryLight"
             fontSize={[5, 6]}
-            mt={3}
-            mb={2}
+            mt={[3, 4]}
+            mb={[2, 3]}
+            mx="auto"
             style={{ maxWidth: '48rem' }}
           >
             Welcome back to Chicago’s premier high school hackathon.
           </Heading.h2>
-          <Heading.h3 fontSize={[3, 5]} color={theme.colors.alt}>
-            June 22-23, 2019 <Text.span color="muted">— Location TBA</Text.span>
+          <Heading.h3 fontSize={[3, 4]} color="alt">
+            June 22-23, 2019 <Text.span color="muted">— Venue TBA</Text.span>
           </Heading.h3>
           <Card ml={[-3, -4]}>
             <EmailForm />

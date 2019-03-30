@@ -26,7 +26,7 @@ const Wrap = styled(Box)`
   }
 `
 const EmailButton = styled(Button.withComponent('a')).attrs({
-  bg: theme.colors.primary,
+  bg: 'alt',
   color: 'white',
   px: 1,
   py: 1
@@ -40,8 +40,7 @@ const EmailButton = styled(Button.withComponent('a')).attrs({
     right: 0;
   }
 `
-const LeaderName = styled(Text)`
-  font-family: ${theme.font};
+const LeaderName = styled(Text).attrs({ bold: true })`
   line-height: 1.125;
 `
 const username = a => a.split(' ')[0].toLowerCase()

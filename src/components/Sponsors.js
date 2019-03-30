@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, theme } from '@hackclub/design-system'
 import data from 'data'
 
-const Base = styled(Container)`
+const Base = styled(Container).attrs({ maxWidth: 72 })`
   display: grid;
   grid-gap: ${theme.space[2]}px;
   grid-template-columns: repeat(

@@ -32,6 +32,7 @@ injectGlobal`
     font-family: ${config.font};
     font-weight: normal;
     line-height: 1.5;
+    letter-spacing: -.02em;
   }
   ::selection {
     background-color: ${theme.colors.primary};
