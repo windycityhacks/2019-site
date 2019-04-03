@@ -17,7 +17,7 @@ import Registration from 'components/Registration'
 import IconButton from 'components/IconButton'
 import Headline from 'components/Headline'
 
-const url = 'http://hackpenn.com/'
+const url = 'http://windyhacks.com/'
 const twitterURL = (text, u = url) =>
   `https://twitter.com/intent/tweet?text=${text
     .split(' ')
@@ -66,7 +66,7 @@ export default () => (
             <ShareButton
               service="Twitter"
               url={twitterURL(
-                'Check out @hackpenn, PA’s largest high school hackathon!',
+                'I just registered for @windyhacks, Chicago’s premier hackathon (learn-to-code event). You should take a look: https://windyhacks.com',
                 url
               )}
               bg="#1da1f2"
