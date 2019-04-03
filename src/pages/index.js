@@ -111,8 +111,9 @@ export default () => (
               Building on years of building&nbsp;opportunity.
             </Heading.h3>
             <Text fontSize={3} mt={[2, 3]}>
-              Our team has helped run a combined 10+ events, incl. MAHacks,
-              Hack Pennsylvania, and more, reaching 1000+ students.
+              Our team has organized a combined 10+ events, including MAHacks,
+              Hack Pennsylvania, and helped with Hack Chicago, Hack the Fog, &
+              more, reaching 1,000+ students.
             </Text>
             <LinkOut href="https://hackpenn.com">
               See one of our previous events
@@ -123,7 +124,7 @@ export default () => (
           </Video>
           <Photo
             aria-label="Opening ceremony at Hack Chicago 2018"
-            src="/2018/ceremony.jpg"
+            src="/photos/hackpenn_team.jpg"
           />
           <Card>
             <Heading.h3 fontSize={[4, 5]} my={0}>
@@ -131,8 +132,8 @@ export default () => (
             </Heading.h3>
             <Text fontSize={3} mt={[2, 3]}>
               Underrepresented students are systematically discouraged from
-              pursuing tech; Windy City Hacks provides a supportive community
-              for women, minorities, and LGBTQ+ students, & gives them the
+              pursuing tech. Windy City Hacks provides a supportive community
+              for women, minorities, & LGBTQ+ students, and gives them the
               resources to make amazing things. No matter who you are, you’re
               welcome here—and you’ll surprise yourself by what you can
               accomplish.{' '}

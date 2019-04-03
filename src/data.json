@@ -2,6 +2,7 @@
   "name": "Windy City Hacks",
   "title": "Windy City Hacks – Chicago’s premier high school hackathon",
   "description": "Register today for 24 hours of coding, fun, free food, and prizes. Windy City Hacks returns June 22, 2019.",
+  "date": "June 22, 2019",
   "url": "https://windyhacks.com",
   "twitter": "@windyhacks",
   "img": "https://windyhacks.com/card.png",
@@ -64,7 +65,7 @@
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "validFrom": "2019-04-01",
-      "validThrough": "2019-06-23"
+      "validThrough": "2019-06-22"
     },
     "performer": {
       "@type": "PerformingGroup",
