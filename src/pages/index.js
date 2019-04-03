@@ -111,12 +111,12 @@ export default () => (
               Building on years of building&nbsp;opportunity.
             </Heading.h3>
             <Text fontSize={3} mt={[2, 3]}>
-              Our team has been running hackathons for years, incl. Hack
-              Chicago, Hack Pennsylvania, and more, reaching a combined total of
+              Our team has run a combined 10+ events, incl. MAHacks,
+              Hack Pennsylvania, and more, reaching a combined total of
               1000+ students.
             </Text>
-            <LinkOut href="https://hackchicago.io">
-              See last year’s event
+            <LinkOut href="https://hackpenn.com">
+              See one of our previous events
             </LinkOut>
           </Card>
           <Video aria-label="High school students coding at Hack Chicago 2018">
