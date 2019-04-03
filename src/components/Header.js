@@ -33,7 +33,7 @@ const Base = styled(Box.section)`
   position: relative;
 
   h1 {
-    line-height: 0.875;
+    line-height: 1;
     letter-spacing: -0.04em;
   }
   h2 {
@@ -96,7 +96,7 @@ export default class Header extends PureComponent {
             opacity: Math.max(1 - scroll / 128, 0)
           }}
         >
-          <Heading.h1 color="primaryDark" fontSize={[7, 8, 9]}>
+          <Heading.h1 color="primaryDark" fontSize={[6, 8, 9]}>
             Windy City Hacks
           </Heading.h1>
           <Heading.h2
@@ -107,12 +107,12 @@ export default class Header extends PureComponent {
             mx="auto"
             style={{ maxWidth: '48rem' }}
           >
-            Welcome back to Chicago’s premier high school hackathon.
+            Welcome back to Chicago’s premier high&nbsp;school hackathon.
           </Heading.h2>
           <Heading.h3 fontSize={[3, 4]} color="alt">
             June 22-23, 2019 <Text.span color="muted">— Venue TBA</Text.span>
           </Heading.h3>
-          <Card ml={[-3, -4]}>
+          <Card align="center" ml={[-3, -4]}>
             <EmailForm />
           </Card>
         </Container>

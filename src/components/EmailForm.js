@@ -10,6 +10,7 @@ import Action from 'components/Action'
 
 const Layout = styled(Flex).attrs({
   flexDirection: ['column', 'row'],
+  justify: 'center',
   align: ['start', 'flex-end'],
   width: 1,
   wrap: true
