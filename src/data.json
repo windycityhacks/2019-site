@@ -10,7 +10,7 @@
     "instagram": "https://www.instagram.com/windycityhacks",
     "facebook": "https://fb.me/windyhacks",
     "messenger": "https://m.me/windyhacks",
-    "email": "mailto:hello@windyhacks.com"
+    "email": "mailto:team@windyhacks.com"
   },
   "org": {
     "@context": "https://schema.org",
@@ -26,7 +26,7 @@
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "email": "hello@windyhacks.com",
+        "email": "team@windyhacks.com",
         "contactType": "customer support",
         "url": "https://windyhacks.com"
       }
