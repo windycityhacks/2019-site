@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import data from 'data'
 import { theme } from 'theme'
 import ThemeProvider from 'theme'
+import BG from 'components/BG'
 import '../../static/fonts.css'
 
 const { name, title, description, img, url, org, event } = data
@@ -12,7 +13,7 @@ const meta = tags =>
     React.createElement('meta', { ...props, key: index })
   )
 
-export default ({ children }) => (
+export default ({ bg, children }) => (
   <ThemeProvider>
     <Helmet title={title}>
       <html lang="en" />
@@ -42,6 +43,7 @@ export default ({ children }) => (
       <script type="application/ld+json" children={JSON.stringify(org)} />
       <script type="application/ld+json" children={JSON.stringify(event)} />
     </Helmet>
+    {bg && <BG color={bg} />}
     {children}
   </ThemeProvider>
 )
