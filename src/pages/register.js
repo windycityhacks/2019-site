@@ -17,7 +17,7 @@ import Registration from 'components/Registration'
 import IconButton from 'components/IconButton'
 import Headline from 'components/Headline'
 
-const url = 'http://windyhacks.com/'
+const url = 'https://windyhacks.com/'
 const twitterURL = (text, u = url) =>
   `https://twitter.com/intent/tweet?text=${text
     .split(' ')
@@ -51,29 +51,27 @@ export default () => (
       <Sheet maxWidth={36} mt={4} align="left" color="black">
         <Registration />
       </Sheet>
-      {jsCookie.get('signedUp') && (
-        <Sheet
-          p={[3, 4]}
-          mt={[4, 5]}
-          align="center"
-          maxWidth={24}
-          boxShadowSize="md"
-        >
-          <Heading.h2 f={3} caps mb={2}>
-            Share it!
-          </Heading.h2>
-          <ShareButton
-            service="Twitter"
-            url={twitterURL(
-              'I just registered for @windyhacks, Chicago’s premier hackathon (learn-to-code event). You should take a look: https://windyhacks.com',
-              url
-            )}
-            bg="#1da1f2"
-            mr={3}
-          />
-          <ShareButton service="Facebook" url={facebookURL(url)} bg="#3b5998" />
-        </Sheet>
-      )}
+      <Sheet
+        p={[3, 4]}
+        mt={[4, 5]}
+        align="center"
+        maxWidth={24}
+        boxShadowSize="md"
+      >
+        <Heading.h2 f={3} caps mb={2}>
+          Share it!
+        </Heading.h2>
+        <ShareButton
+          service="Twitter"
+          url={twitterURL(
+            'I just registered for @windyhacks, Chicago’s premier hackathon (learn-to-code event). You should take a look!',
+            url
+          )}
+          bg="#1da1f2"
+          mr={3}
+        />
+        <ShareButton service="Facebook" url={facebookURL(url)} bg="#3b5998" />
+      </Sheet>
     </Box.main>
     <Footer />
   </Layout>
