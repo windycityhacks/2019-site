@@ -111,9 +111,8 @@ export default () => (
               Building on years of building&nbsp;opportunity.
             </Heading.h3>
             <Text fontSize={3} mt={[2, 3]}>
-              Our team has run a combined 10+ events, incl. MAHacks,
-              Hack Pennsylvania, and more, reaching a combined total of
-              1000+ students.
+              Our team has helped run a combined 10+ events, incl. MAHacks,
+              Hack Pennsylvania, and more, reaching 1000+ students.
             </Text>
             <LinkOut href="https://hackpenn.com">
               See one of our previous events
