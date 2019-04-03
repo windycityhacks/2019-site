@@ -46,7 +46,7 @@ export default class Registration extends Component {
 
     return submitted ? (
       <Box align="center">
-        <Text fontSize={[3, 4]}>
+        <Text fontSize={4} bold>
           Thanks for registering!{' '}
           <span role="img" aria-label="Celebration emoji">
             🎉
@@ -58,13 +58,13 @@ export default class Registration extends Component {
       </Box>
     ) : signedUp ? (
       <Box align="center">
-        <Text fontSize={4}>
+        <Text fontSize={4} bold>
           You’ve already signed up!{' '}
           <span role="img" aria-label="Celebration emoji">
             🎉
           </span>
         </Text>
-        <Text fontSize={2}>
+        <Text fontSize={3}>
           If this is an error,{' '}
           <a
             onClick={e => {
