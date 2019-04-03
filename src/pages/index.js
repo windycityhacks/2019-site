@@ -123,7 +123,7 @@ export default () => (
             <source src="/2018/hacking.mp4" type="video/mp4" />
           </Video>
           <Photo
-            aria-label="Opening ceremony at Hack Chicago 2018"
+            aria-label="High school students working together at Hack Pennsylvania 2019"
             src="/photos/hackpenn_team.jpg"
           />
           <Card>
