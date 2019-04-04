@@ -38,7 +38,7 @@ const ShareButton = ({ children, ...props }) => (
 
 export default () => (
   <Layout bg="primaryLight">
-    <Nav />
+    {/*<Nav />*/}
     <Container maxWidth={28} align="center" width={1} pt={[3, 4]} px={3}>
       <Headline color="white">Sign up for Windy City Hacks</Headline>
       <Text color="smoke" fontSize={[3, 4]} mt={2}>
