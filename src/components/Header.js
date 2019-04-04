@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Box, Container, Heading, Text, theme } from '@hackclub/design-system'
-import Card from 'components/Card'
-import EmailForm from 'components/EmailForm'
+import Action from 'components/Action'
 
 const headerFrames = keyframes`
   from {
@@ -36,24 +35,14 @@ const Base = styled(Box.section)`
     line-height: 1;
     letter-spacing: -0.04em;
   }
+
   h2 {
     line-height: 1.125;
     letter-spacing: -0.04em;
   }
-  input {
-    background: ${theme.colors.white};
-  }
 
-  ${Card} {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.875);
-    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-      background: rgba(255, 255, 255, 0.5);
-      -webkit-backdrop-filter: saturate(180%) blur(8px);
-    }
-    ${theme.mediaQueries.reduceTransparency} {
-      background: ${theme.colors.muted} !important;
-    }
+  ${Action} {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.125) !important;
   }
 
   + section {
@@ -109,12 +98,12 @@ export default class Header extends PureComponent {
           >
             Welcome back to Chicago’s premier high&nbsp;school hackathon.
           </Heading.h2>
-          <Heading.h3 fontSize={[3, 4]} color="alt">
+          <Heading.h3 fontSize={[3, 4]} color="muted" mb={4}>
             June 22-23, 2019 <Text.span color="muted">— Venue TBA</Text.span>
           </Heading.h3>
-          <Card align="center" ml={[-3, -4]}>
-            <EmailForm />
-          </Card>
+          <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
+            Sign up now
+          </Action>
         </Container>
       </Base>
     )

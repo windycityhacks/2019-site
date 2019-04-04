@@ -19,7 +19,7 @@ import Headline from 'components/Headline'
 import Layout from 'components/Layout'
 import Leadership from 'components/Leadership'
 // import Modules from 'components/Modules'
-// import Module from 'components/Module'
+import Apply from 'components/Apply'
 import Nav from 'components/Nav'
 import Photo from 'components/Photo'
 // import Sponsors from 'components/Sponsors'
@@ -111,8 +111,9 @@ export default () => (
               Building on years of building&nbsp;opportunity.
             </Heading.h3>
             <Text fontSize={3} mt={[2, 3]}>
-              Our team has helped run a combined 10+ events, incl. MAHacks,
-              Hack Pennsylvania, and more, reaching 1000+ students.
+              Our team has organized a combined 10+ events, including MAHacks,
+              Hack Pennsylvania, and helped with Hack Chicago, Hack the Fog, &
+              more, reaching 1,000+ students.
             </Text>
             <LinkOut href="https://hackpenn.com">
               See one of our previous events
@@ -122,8 +123,8 @@ export default () => (
             <source src="/2018/hacking.mp4" type="video/mp4" />
           </Video>
           <Photo
-            aria-label="Opening ceremony at Hack Chicago 2018"
-            src="/2018/ceremony.jpg"
+            aria-label="High school students working together at Hack Pennsylvania 2019"
+            src="/photos/hackpenn_team.jpg"
           />
           <Card>
             <Heading.h3 fontSize={[4, 5]} my={0}>
@@ -131,8 +132,8 @@ export default () => (
             </Heading.h3>
             <Text fontSize={3} mt={[2, 3]}>
               Underrepresented students are systematically discouraged from
-              pursuing tech; Windy City Hacks provides a supportive community
-              for women, minorities, and LGBTQ+ students, & gives them the
+              pursuing tech. Windy City Hacks provides a supportive community
+              for women, minorities, & LGBTQ+ students, and gives them the
               resources to make amazing things. No matter who you are, you’re
               welcome here—and you’ll surprise yourself by what you can
               accomplish.{' '}
@@ -163,6 +164,10 @@ export default () => (
             body="Hold up! No, we’re not “hacking” servers or databases. The word is being constructively re-defined as building things—apps, games, websites, etc. At Windy City Hacks, it’s all safe, supervised, & entirely educational."
           />
           <Question
+            name="What can I make?"
+            body="Anything! A website, app, game, hardware hack, you name it. Judges will rate projects on creativity, technical skill demonstrated, polish, & utility."
+          />
+          <Question
             name="What if I’m new to coding?"
             body="At Windy City Hacks, complete beginners are not only welcome, but expected! Learn as you go with our intro workshops & mentors."
           />
@@ -173,10 +178,6 @@ export default () => (
           <Question
             name="Do I need a team?"
             body="Nope! You’ll have an opportunity to meet fellow hackers and make teams of up to 6—find some new friends, bring yours, or work alone."
-          />
-          <Question
-            name="What can I make?"
-            body="Anything! A website, app, game, hardware hack, you name it. Judges will rate projects on creativity, technical skill demonstrated, polish, & utility."
           />
           <Question
             name="What should I bring?"
@@ -191,12 +192,12 @@ export default () => (
             body={
               <>
                 We’re independently-organized by high schoolers, sponsored via
-                an intl. non-profit called{' '}
-                <A href="https://hackclub.com" color={theme.colors.alt}>
+                an international non-profit called{' '}
+                <A href="https://hackclub.com" color="alt">
                   Hack Club
                 </A>
-                . The event is fully supervised by several dozen adults (with
-                background checks).
+                . The event is fully supervised by several dozen adult mentors
+                and chaperones (with background checks).
               </>
             }
           />
@@ -233,11 +234,7 @@ export default () => (
       </Container>
     </Box.section>
     <Leadership />
-    <Box.section bg={theme.colors.snow}>
-      <Container maxWidth={72} width={1} px={3} py={[4, 5]}>
-        <EmailForm />
-      </Container>
-    </Box.section>
+    <Apply />
     <Footer />
   </Layout>
 )
