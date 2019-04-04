@@ -8,7 +8,6 @@ import {
   Text,
   Link
 } from '@hackclub/design-system'
-import { theme } from 'theme'
 import { date } from 'data'
 import Layout from 'components/Layout'
 import Nav from 'components/Nav'
@@ -22,7 +21,7 @@ const twitterURL = (text, u = url) =>
   `https://twitter.com/intent/tweet?text=${text
     .split(' ')
     .join('%20')}&url=${u}`
-const facebookURL = (text, u = url) =>
+const facebookURL = (u = url) =>
   `https://www.facebook.com/sharer/sharer.php?u=${u}`
 
 const ShareButton = ({ children, ...props }) => (
@@ -58,13 +57,13 @@ export default () => (
         maxWidth={24}
         boxShadowSize="md"
       >
-        <Heading.h2 f={3} caps mb={2}>
+        <Heading.h2 color="black" fontSize={3} caps mb={2}>
           Share it!
         </Heading.h2>
         <ShareButton
           service="Twitter"
           url={twitterURL(
-            'I just registered for @windyhacks, Chicago’s premier hackathon (learn-to-code event). You should take a look!',
+            'I just registered for @windyhacks, Chicago’s free 24-hour high school hackathon',
             url
           )}
           bg="#1da1f2"
