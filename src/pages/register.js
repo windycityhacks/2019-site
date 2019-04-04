@@ -1,5 +1,4 @@
 import React from 'react'
-import jsCookie from 'js-cookie'
 import {
   Box,
   Container,
@@ -50,13 +49,7 @@ export default () => (
       <Sheet maxWidth={36} mt={4} align="left" color="black">
         <Registration />
       </Sheet>
-      <Sheet
-        p={[3, 4]}
-        mt={[4, 5]}
-        align="center"
-        maxWidth={24}
-        boxShadowSize="md"
-      >
+      <Sheet mt={[4, 5]} align="center" maxWidth={24}>
         <Heading.h2 color="black" fontSize={3} caps mb={2}>
           Share it!
         </Heading.h2>
