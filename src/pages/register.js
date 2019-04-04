@@ -42,7 +42,7 @@ export default () => (
     <Container maxWidth={28} align="center" width={1} pt={[3, 4]} px={3}>
       <Headline color="white">Sign up for Windy City Hacks</Headline>
       <Text color="smoke" fontSize={[3, 4]} mt={2}>
-        Your ticket is free, including meals & swag. Be there, {date}!
+        Your ticket is free, including meals & swag. See you on {date}!
       </Text>
     </Container>
     <Box.main pb={[4, 5]} px={3}>

@@ -45,7 +45,7 @@ const Apply = props => (
         inverted
         chevronRight
       >
-        Sign up free
+        Sign up now
       </Action>
     </Container>
   </Section>
