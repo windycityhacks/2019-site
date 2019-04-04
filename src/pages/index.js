@@ -164,6 +164,10 @@ export default () => (
             body="Hold up! No, we’re not “hacking” servers or databases. The word is being constructively re-defined as building things—apps, games, websites, etc. At Windy City Hacks, it’s all safe, supervised, & entirely educational."
           />
           <Question
+            name="What can I make?"
+            body="Anything! A website, app, game, hardware hack, you name it. Judges will rate projects on creativity, technical skill demonstrated, polish, & utility."
+          />
+          <Question
             name="What if I’m new to coding?"
             body="At Windy City Hacks, complete beginners are not only welcome, but expected! Learn as you go with our intro workshops & mentors."
           />
@@ -174,10 +178,6 @@ export default () => (
           <Question
             name="Do I need a team?"
             body="Nope! You’ll have an opportunity to meet fellow hackers and make teams of up to 6—find some new friends, bring yours, or work alone."
-          />
-          <Question
-            name="What can I make?"
-            body="Anything! A website, app, game, hardware hack, you name it. Judges will rate projects on creativity, technical skill demonstrated, polish, & utility."
           />
           <Question
             name="What should I bring?"
@@ -192,12 +192,12 @@ export default () => (
             body={
               <>
                 We’re independently-organized by high schoolers, sponsored via
-                an intl. non-profit called{' '}
-                <A href="https://hackclub.com" color={theme.colors.alt}>
+                an international non-profit called{' '}
+                <A href="https://hackclub.com" color="alt">
                   Hack Club
                 </A>
-                . The event is fully supervised by several dozen adults (with
-                background checks).
+                . The event is fully supervised by several dozen adult mentors
+                and chaperones (with background checks).
               </>
             }
           />

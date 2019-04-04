@@ -8,7 +8,7 @@ const Video = styled(Box.withComponent('video')).attrs({
   loop: true
 })`
   overflow: hidden;
-  border-radius: ${theme.radii[1]};
+  border-radius: ${theme.radii[2]};
   max-width: 100%;
 `
 

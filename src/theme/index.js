@@ -35,7 +35,7 @@ injectGlobal`
     letter-spacing: -.02em;
   }
   ::selection {
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.alt};
     color: ${theme.colors.white};
   }
   img {
