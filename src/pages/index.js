@@ -19,7 +19,7 @@ import Headline from 'components/Headline'
 import Layout from 'components/Layout'
 import Leadership from 'components/Leadership'
 // import Modules from 'components/Modules'
-// import Module from 'components/Module'
+import Apply from 'components/Apply'
 import Nav from 'components/Nav'
 import Photo from 'components/Photo'
 // import Sponsors from 'components/Sponsors'
@@ -234,11 +234,7 @@ export default () => (
       </Container>
     </Box.section>
     <Leadership />
-    <Box.section bg={theme.colors.snow}>
-      <Container maxWidth={72} width={1} px={3} py={[4, 5]}>
-        <EmailForm />
-      </Container>
-    </Box.section>
+    <Apply />
     <Footer />
   </Layout>
 )

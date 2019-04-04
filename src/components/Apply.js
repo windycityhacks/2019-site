@@ -26,7 +26,7 @@ const Art = styled(Box)`
 
 const Apply = props => (
   <Section
-    bg={theme.colors.primaryDark}
+    bg="primary"
     style={{ position: 'relative', overflow: 'hidden' }}
     {...props}
   >
@@ -40,12 +40,12 @@ const Apply = props => (
       <Action
         mt={3}
         to="/register"
-        bg={theme.colors.primary}
+        bg={theme.colors.alt}
         scale
         inverted
         chevronRight
       >
-        Register
+        Sign up free
       </Action>
     </Container>
   </Section>
