@@ -4,7 +4,14 @@ import { Formik } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
 import jsCookie from 'js-cookie'
-import { Field, LargeButton, Box, Text, Heading } from '@hackclub/design-system'
+import {
+  Field,
+  LargeButton,
+  Box,
+  Text,
+  Sheet,
+  Heading
+} from '@hackclub/design-system'
 import { theme } from 'theme'
 
 const REQUIRED_STRING = 'required'
@@ -36,34 +43,54 @@ const Explanation = styled(Text).attrs({
   mb: 3
 })``
 
+const emoji = (
+  <span role="img" aria-label="Celebration emoji">
+    🎉
+  </span>
+)
+
 const Submitted = () => (
   <Box align="center">
-    <Text fontSize={4} bold>
-      Thanks for registering!{' '}
-      <span role="img" aria-label="Celebration emoji">
-        🎉
-      </span>
-    </Text>
+    <Heading.h2 fontSize={4}>Thanks for registering! {emoji}</Heading.h2>
     <Text fontSize={2}>You should receive a confirmation email shortly.</Text>
   </Box>
 )
 
 const SignedUp = ({ unsignup }) => (
   <Box align="center">
-    <Text fontSize={4} bold>
-      You’ve already signed up!{' '}
-      <span role="img" aria-label="Celebration emoji">
-        🎉
-      </span>
-    </Text>
+    <Heading.h2 fontSize={4}>You’ve already signed up! {emoji}</Heading.h2>
     <Text fontSize={3}>
       If this is an error,{' '}
-      <a onClick={unsignup} href="#" children="click here" />.
+      <a onClick={unsignup} href="#" children="click here" className="sans" />.
     </Text>
   </Box>
 )
 
-export default class Registration extends Component {
+const schema = yup.object().shape({
+  first_name: yup.string().required(REQUIRED_STRING),
+  last_name: yup.string().required(REQUIRED_STRING),
+  email: yup
+    .string()
+    .required(REQUIRED_STRING)
+    .email(INVALID_EMAIL_STRING),
+  phone_number: yup.string(),
+  pronouns: yup.string().required(REQUIRED_STRING),
+  school: yup.string().required(REQUIRED_STRING),
+  grade: yup.string().required(REQUIRED_STRING),
+  shirt_size: yup.string().required(REQUIRED_STRING),
+  dietary_restrictions: yup.string(),
+  travel: yup.string(),
+  computer: yup.string(),
+  emergency_email: yup
+    .string()
+    .required(REQUIRED_STRING)
+    .email(INVALID_EMAIL_STRING),
+  emergency_phone: yup.string().required(REQUIRED_STRING),
+  note: yup.string(),
+  referrer: yup.string().required(REQUIRED_STRING)
+})
+
+class Registration extends Component {
   state = {
     submitted: false
   }
@@ -84,72 +111,24 @@ export default class Registration extends Component {
       <SignedUp unsignup={unsignup} />
     ) : (
       <Formik
-        initialValues={{
-          first_name: '',
-          last_name: '',
-          email: '',
-          phone_number: '',
-          pronouns: '',
-          school: '',
-          grade: '',
-          shirt_size: '',
-          dietary_restrictions: '',
-          travel: '',
-          computer: '',
-          emergency_email: '',
-          emergency_phone: '',
-          note: '',
-          referrer: ''
-        }}
-        validationSchema={yup.object().shape({
-          first_name: yup.string().required(REQUIRED_STRING),
-          last_name: yup.string().required(REQUIRED_STRING),
-          email: yup
-            .string()
-            .required(REQUIRED_STRING)
-            .email(INVALID_EMAIL_STRING),
-          phone_number: yup.string(),
-          pronouns: yup.string().required(REQUIRED_STRING),
-          school: yup.string().required(REQUIRED_STRING),
-          grade: yup.string().required(REQUIRED_STRING),
-          shirt_size: yup.string().required(REQUIRED_STRING),
-          dietary_restrictions: yup.string(),
-          travel: yup.string(),
-          computer: yup.string(),
-          emergency_email: yup
-            .string()
-            .required(REQUIRED_STRING)
-            .email(INVALID_EMAIL_STRING),
-          emergency_phone: yup.string().required(REQUIRED_STRING),
-          note: yup.string(),
-          referrer: yup.string().required(REQUIRED_STRING)
-        })}
-        validateOnChange={false}
+        validationSchema={schema}
+        validateOnChange
         onSubmit={(attendee, { setSubmitting }) => {
           setSubmitting(true)
-          axios
-            .post(
-              'https://dash.zane.sh/api/v1/events/windy-city-hacks/attendees',
-              {
-                attendee
-              }
-            )
-            .then(res => {
-              setSubmitting(false)
-              if (res.status === 200) {
-                this.setState({ submitted: true })
-                jsCookie.set('signedUp', 'true')
+          const ENDPOINT =
+            'https://dash.zane.sh/api/v1/events/windy-city-hacks/attendees'
+          axios.post(ENDPOINT, { attendee }).then(res => {
+            setSubmitting(false)
+            if (res.status === 200) {
+              this.setState({ submitted: true })
+              jsCookie.set('signedUp', 'true')
 
-                /* eslint-ignore */
-                FS.identify(attendee.email, {
-                  displayName: `${attendee.first_name} ${attendee.last_name}`,
-                  email: attendee.email,
-                  school: attendee.school,
-                  grade: attendee.grade,
-                  referrer: attendee.referrer
-                })
-              }
-            })
+              const displayName = `${attendee.first_name} ${attendee.last_name}`
+              const { email, school, grade, referrer } = attendee
+              const profile = { displayName, email, school, grade, referrer }
+              if (typeof FS !== 'undefined') FS.identify(email, profile)
+            }
+          })
         }}
       >
         {({ values, errors, handleChange, handleSubmit, isSubmitting }) => (
@@ -383,3 +362,9 @@ export default class Registration extends Component {
     )
   }
 }
+
+export default () => (
+  <Sheet maxWidth={36} mt={4} align="left" color="black">
+    <Registration />
+  </Sheet>
+)
