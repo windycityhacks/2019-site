@@ -137,13 +137,13 @@ export default class Registration extends Component {
                 this.setState({ submitted: true })
                 jsCookie.set('signedUp', 'true')
 
-                /*FS.identify(attendee.email, {
+                FS.identify(attendee.email, {
                   displayName: `${attendee.first_name} ${attendee.last_name}`,
                   email: attendee.email,
                   school: attendee.school,
                   grade: attendee.grade,
                   referrer: attendee.referrer
-                })*/
+                })
               }
             })
         }}
