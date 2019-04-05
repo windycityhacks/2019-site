@@ -94,12 +94,14 @@ export default class Header extends PureComponent {
             mt={[3, 4]}
             mb={[2, 3]}
             mx="auto"
-            style={{ maxWidth: '48rem' }}
+            maxWidth={54}
           >
-            Welcome back to Chicago’s premier high&nbsp;school hackathon.
+            High schoolers: learn to code in 24&nbsp;hours of free food, prizes,
+            & fun.
           </Heading.h2>
           <Heading.h3 fontSize={[3, 4]} color="muted" mb={4}>
-            June 22-23, 2019 <Text.span color="muted">— Venue TBA</Text.span>
+            June 22-23, 2019, Chicago{' '}
+            <Text.span color="muted">— Venue TBA</Text.span>
           </Heading.h3>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
             Sign up now
