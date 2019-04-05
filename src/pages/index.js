@@ -112,7 +112,7 @@ export default () => (
             </Heading.h3>
             <Text fontSize={3} mt={[2, 3]}>
               Our team has organized a combined 10+ events, including MAHacks,
-              Hack Pennsylvania, and helped with Hack Chicago, Hack the Fog, &
+              Hack Pennsylvania, and helped run Hack Chicago, Hack the Fog, &
               more, reaching 1,000+ students.
             </Text>
             <LinkOut href="https://hackpenn.com">
@@ -147,9 +147,7 @@ export default () => (
     </Box.section>
     <Box.section id="faq">
       <Container maxWidth={72} width={1} px={3} pt={[4, 5]} color="black">
-        <Headline fontSize={[6, 7]} mb={4}>
-          FAQ
-        </Headline>
+        <Headline mb={4}>FAQ</Headline>
         <Grid>
           <Question
             name="How much does it cost?"
@@ -165,7 +163,7 @@ export default () => (
           />
           <Question
             name="What can I make?"
-            body="Anything! A website, app, game, hardware hack, you name it. Judges will rate projects on creativity, technical skill demonstrated, polish, & utility."
+            body="Anything! A website, app, game, hardware hack, you name it. Judges will rate projects on creativity, technical skill demonstrated, polish, and utility."
           />
           <Question
             name="What if I’m new to coding?"
@@ -173,11 +171,11 @@ export default () => (
           />
           <Question
             name="What if I can already code?"
-            body="Windy City Hacks is for you, too! We welcome (& have prizes for) absolute beginners, experts, & everyone in between."
+            body="Windy City Hacks is for you, too! We welcome (and have prizes for) absolute beginners, experts, & everyone in between."
           />
           <Question
             name="Do I need a team?"
-            body="Nope! You’ll have an opportunity to meet fellow hackers and make teams of up to 6—find some new friends, bring yours, or work alone."
+            body="Nope! You’ll have an opportunity to meet fellow hackers and make teams of up to 5—find some new friends, bring yours, or work alone."
           />
           <Question
             name="What should I bring?"
@@ -185,7 +183,7 @@ export default () => (
           />
           <Question
             name="Where will I sleep?"
-            body="We will provide quiet places to sleep at the event, and we will turn lights off after the midnight snack. We'll make sure you're able to get some sleep if you need it!"
+            body="We will provide quiet places to sleep at the event, and turn lights off after the midnight snack. We’ll make sure you’re able to get some sleep if you need it!"
           />
           <Question
             name="Who runs this? Is it supervised?"
@@ -193,7 +191,7 @@ export default () => (
               <>
                 We’re independently-organized by high schoolers, sponsored via
                 an international non-profit called{' '}
-                <A href="https://hackclub.com" color="alt">
+                <A href="https://hackclub.com" color="alt" regular>
                   Hack Club
                 </A>
                 . The event is fully supervised by several dozen adult mentors
