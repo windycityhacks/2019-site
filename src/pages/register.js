@@ -8,6 +8,7 @@ import {
   Link
 } from '@hackclub/design-system'
 import { date } from 'data'
+import jsCookie from 'js-cookie'
 import Layout from 'components/Layout'
 import SimpleNav from 'components/SimpleNav'
 import Footer from 'components/Footer'
@@ -36,6 +37,8 @@ const ShareButton = ({ children, ...props }) => (
   </Link>
 )
 
+const signedUp = () => jsCookie.get('signedUp')
+
 export default () => (
   <Layout bg="primaryLight">
     <SimpleNav />
@@ -49,21 +52,23 @@ export default () => (
       <Sheet maxWidth={36} mt={4} align="left" color="black">
         <Registration />
       </Sheet>
-      <Sheet mt={[4, 5]} align="center" maxWidth={24}>
-        <Heading.h2 color="black" fontSize={3} caps mb={2}>
-          Share it!
-        </Heading.h2>
-        <ShareButton
-          service="Twitter"
-          url={twitterURL(
-            'I just registered for @windyhacks, Chicago’s free 24-hour high school hackathon',
-            url
-          )}
-          bg="#1da1f2"
-          mr={3}
-        />
-        <ShareButton service="Facebook" url={facebookURL(url)} bg="#3b5998" />
-      </Sheet>
+      {signedUp() && (
+        <Sheet mt={[4, 5]} align="center" maxWidth={24}>
+          <Heading.h2 color="black" fontSize={3} caps mb={2}>
+            Share it!
+          </Heading.h2>
+          <ShareButton
+            service="Twitter"
+            url={twitterURL(
+              'I just registered for @windyhacks, Chicago’s free 24-hour high school hackathon',
+              url
+            )}
+            bg="#1da1f2"
+            mr={3}
+          />
+          <ShareButton service="Facebook" url={facebookURL(url)} bg="#3b5998" />
+        </Sheet>
+      )}
     </Box.main>
     <Footer />
   </Layout>

@@ -4,14 +4,7 @@ import { Formik } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
 import jsCookie from 'js-cookie'
-import {
-  Field,
-  LargeButton,
-  Box,
-  Text,
-  Sheet,
-  Heading
-} from '@hackclub/design-system'
+import { Field, LargeButton, Box, Text, Heading } from '@hackclub/design-system'
 import { theme } from 'theme'
 
 const REQUIRED_STRING = 'required'
@@ -90,7 +83,7 @@ const schema = yup.object().shape({
   referrer: yup.string().required(REQUIRED_STRING)
 })
 
-class Registration extends Component {
+export default class Registration extends Component {
   state = {
     submitted: false
   }
@@ -362,9 +355,3 @@ class Registration extends Component {
     )
   }
 }
-
-export default () => (
-  <Sheet maxWidth={36} mt={4} align="left" color="black">
-    <Registration />
-  </Sheet>
-)
