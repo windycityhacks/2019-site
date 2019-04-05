@@ -10,7 +10,7 @@ import {
 import { date } from 'data'
 import jsCookie from 'js-cookie'
 import Layout from 'components/Layout'
-import SimpleNav from 'components/SimpleNav'
+import Nav from 'components/Nav'
 import Footer from 'components/Footer'
 import Registration from 'components/Registration'
 import IconButton from 'components/IconButton'
@@ -41,7 +41,7 @@ const signedUp = () => jsCookie.get('signedUp')
 
 export default () => (
   <Layout bg="primaryLight">
-    <SimpleNav />
+    <Nav />
     <Container maxWidth={30} align="center" width={1} pt={[3, 4]} px={3}>
       <Headline color="white">Sign up for Windy&nbsp;City Hacks</Headline>
       <Text color="primaryWash" fontSize={[3, 4]} mt={2}>

@@ -1,21 +1,31 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import theme from 'theme/config'
 import { Link } from 'gatsby'
 
 const Flag = styled(Link).attrs({
   to: '/',
-  'aria-label': 'Homepage'
+  'aria-label': 'Logo for homepage'
 })`
-  background: url(${require('../../static/flag.svg')}) no-repeat;
+  display: inline-block;
+  background-repeat: no-repeat;
   background-size: auto 100%;
-  border-radius: ${theme.pill};
   flex-shrink: 0;
-  width: 64px;
   height: 64px;
-  ${theme.mediaQueries.md} {
-    width: 72px;
-    height: 72px;
-  }
+  ${props =>
+    props.lockup
+      ? css`
+          background-image: url(${require('../../static/lockup-alt.svg')});
+          width: 183px;
+        `
+      : css`
+          background-image: url(${require('../../static/flag-bright.svg')});
+          border-radius: ${theme.pill};
+          width: 64px;
+          ${theme.mediaQueries.md} {
+            width: 72px;
+            height: 72px;
+          }
+        `}
 `
 
 export default Flag

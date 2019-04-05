@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Box, Container, Heading, Text, theme } from '@hackclub/design-system'
+import Nav from 'components/Nav'
 import Action from 'components/Action'
 
 const headerFrames = keyframes`
@@ -73,12 +74,14 @@ export default class Header extends PureComponent {
   render() {
     const { scroll } = this.state
     return (
-      <Base color="primary" py={[5, 6]} align="center">
+      <Base color="primary" align="center">
         <Background />
+        <Nav hideLinks />
         <Container
           maxWidth={72}
           width={1}
           px={3}
+          py={[4, 5, 6]}
           style={{
             willChange: 'transform',
             transform: `translateY(-${Math.max(scroll / 2)}px)`,
@@ -101,7 +104,7 @@ export default class Header extends PureComponent {
           </Heading.h2>
           <Text fontSize={[3, 4]} color="muted" mb={4}>
             June 22-23, 2019, Chicago{' '}
-            <Text.span color="muted">— Venue TBA</Text.span>
+            <Text.span color="muted">— Venue&nbsp;TBA</Text.span>
           </Text>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
             Sign up now

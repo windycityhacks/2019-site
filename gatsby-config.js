@@ -23,14 +23,14 @@ module.exports = {
         short_name: 'windyhacks',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#08e',
+        theme_color: '#007a87',
         display: 'minimal-ui'
       }
     },
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: './static/star.png',
+        logo: './static/flag-bright.png',
         injectHTML: true,
         icons: {
           android: true,

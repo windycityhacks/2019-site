@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Flex, Box, Container, Link as A } from '@hackclub/design-system'
 import { theme } from 'theme'
+import Flag from 'components/Flag'
 import Action from 'components/Action'
 import Link from 'gatsby-link'
 
@@ -14,7 +15,7 @@ const Base = styled(Box.withComponent('header')).attrs({
 
 const Inner = styled(Container.withComponent(Flex)).attrs({
   maxWidth: 36,
-  justify: 'space-between',
+  justify: props => (props.hideLinks ? 'center' : 'space-between'),
   align: 'center',
   mx: 'auto',
   role: 'navigation'
@@ -30,17 +31,6 @@ const Bar = styled(Box.withComponent('nav'))`
   }
 `
 
-const Logo = styled(A.withComponent(Link)).attrs({
-  to: '/',
-  color: 'white',
-  fontSize: [3, 4],
-  bold: true
-})`
-  text-transform: uppercase;
-  display: inline-block;
-  cursor: pointer;
-`
-
 const Item = styled(A.withComponent(Link)).attrs({
   color: 'inherit',
   fontSize: [2, 3],
@@ -53,7 +43,8 @@ const Item = styled(A.withComponent(Link)).attrs({
 `
 
 const BtnItem = styled(Action).attrs({
-  bg: 'alt',
+  bg: theme.colors.primary,
+  inverted: true,
   fontSize: [2, 3],
   scale: true,
   px: 3,
@@ -65,15 +56,17 @@ const BtnItem = styled(Action).attrs({
   text-transform: uppercase;
 `
 
-const Nav = ({ color = 'primary', ...props }) => (
+const Nav = ({ color = 'primary', hideLinks = false, ...props }) => (
   <Base role="banner" {...props}>
-    <Inner color={color}>
-      <Logo>Windy City Hacks</Logo>
-      <Bar role="navigation" ml={3} align="left">
-        {/* <Item to="/location" children="Location" />
+    <Inner hideLinks={hideLinks} color={color}>
+      <Flag lockup={hideLinks} />
+      {!hideLinks && (
+        <Bar role="navigation" ml={3} align="left">
+          {/* <Item to="/location" children="Location" />
         <Item to="/schedule" children="Schedule" /> */}
-        <BtnItem to="/register" children="Register" />
-      </Bar>
+          <BtnItem to="/register" children="Register" />
+        </Bar>
+      )}
     </Inner>
   </Base>
 )
