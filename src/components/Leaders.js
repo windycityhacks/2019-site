@@ -36,7 +36,13 @@ const EmailButton = styled(Button.withComponent('a')).attrs({
   bottom: 0;
   right: -9px;
 `
-const LeaderName = styled(Text).attrs({ fontSize: [3, 4], mt: 2 })`
+const LeaderName = styled(Text).attrs({
+  color: 'steel',
+  fontSize: 3,
+  bold: true,
+  mt: 2
+})`
+  font-family: ${theme.font} !important;
   line-height: 1.125;
 `
 const username = a => a.split(' ')[0].toLowerCase()

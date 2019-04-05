@@ -35,7 +35,8 @@ const Lead = styled(Container.withComponent(Text)).attrs({
 const Ultralead = styled(Text).attrs({ fontSize: [5, 6, 7] })`
   color: ${theme.colors.primary};
   line-height: 1.125;
-  font-weight: bold;
+  font-family: ${theme.font};
+  font-weight: bold !important;
   letter-spacing: -0.03em;
   max-width: 56rem;
 `
@@ -72,9 +73,8 @@ A.link = styled(A.withComponent(Link))``
 
 export default () => (
   <Layout>
-    {/* <Nav /> */}
     <Header />
-    <Box.section bg="primaryWash">
+    <Box.section bg="primaryWash" id="lead">
       <Container
         maxWidth={72}
         width={1}
@@ -191,7 +191,7 @@ export default () => (
               <>
                 We’re independently-organized by high schoolers, sponsored via
                 an international non-profit called{' '}
-                <A href="https://hackclub.com" color="alt" regular>
+                <A href="https://hackclub.com" color="alt" underline>
                   Hack Club
                 </A>
                 . The event is fully supervised by several dozen adult mentors
@@ -211,8 +211,10 @@ export default () => (
           <A
             href="mailto:theo@windyhacks.com"
             color={theme.colors.primary}
+            className="sans"
             hoverline
             chevronRight
+            ml={2}
           >
             Let’s chat
           </A>

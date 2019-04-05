@@ -28,8 +28,9 @@ export const colors = {
   cool: '#00bdde',
   coolWash: '#7cecff'
 }
+
 // for DS input
-colors.blue = [colors.primaryDark, colors.primaryLight, colors.primaryLight]
+colors.blue = [colors.primaryDark, colors.primary, colors.primaryLight]
 colors.info = colors.primary
 
 theme.colors = colors
@@ -38,8 +39,10 @@ const baseFamily =
   '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif'
 
 const sans = '"Gotham Rounded SSm A","Gotham Rounded SSm B"'
+const serif = 'Sentinel'
 
 theme.font = `${sans},${baseFamily}`
+theme.serif = `${serif},${baseFamily}`
 
 theme.space = [0, 4, 8, 16, 32, 64, 128, 256, 512]
 theme.fontSizes = [12, 14, 16, 18, 24, 32, 48, 64, 72, 96]

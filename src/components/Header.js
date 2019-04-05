@@ -99,10 +99,10 @@ export default class Header extends PureComponent {
             High schoolers: learn to code in 24&nbsp;hours of free food, prizes,
             & fun.
           </Heading.h2>
-          <Heading.h3 fontSize={[3, 4]} color="muted" mb={4}>
+          <Text fontSize={[3, 4]} color="muted" mb={4}>
             June 22-23, 2019, Chicago{' '}
             <Text.span color="muted">— Venue TBA</Text.span>
-          </Heading.h3>
+          </Text>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
             Sign up now
           </Action>

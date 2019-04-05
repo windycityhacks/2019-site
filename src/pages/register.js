@@ -39,8 +39,8 @@ const ShareButton = ({ children, ...props }) => (
 export default () => (
   <Layout bg="primaryLight">
     <SimpleNav />
-    <Container maxWidth={29} align="center" width={1} pt={[3, 4]} px={3}>
-      <Headline color="white">Sign up for Windy City Hacks</Headline>
+    <Container maxWidth={30} align="center" width={1} pt={[3, 4]} px={3}>
+      <Headline color="white">Sign up for Windy&nbsp;City Hacks</Headline>
       <Text color="primaryWash" fontSize={[3, 4]} mt={2}>
         Your ticket is free, including meals & swag. See you on {date}!
       </Text>

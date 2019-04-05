@@ -41,8 +41,15 @@ injectGlobal`
   img {
     max-width: 100%;
   }
-  .mono {
-    font-family: ${config.mono};
+  .sans {
+    font-family: ${config.font};
+    font-weight: 700;
+  }
+  .serif,
+  p {
+    font-family: ${config.serif};
+    font-weight: 400;
+    letter-spacing: 0;
   }
   a {
     box-shadow: none;
@@ -52,10 +59,9 @@ injectGlobal`
     margin: 0;
     padding: 0;
   }
-  p > a,
   strong,
   b {
-    font-weight: bold !important;
+    font-weight: 700 !important;
   }
   @supports (padding: calc(max(env(safe-area-inset-left)))) {
     #___gatsby > div > * {

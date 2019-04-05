@@ -19,6 +19,7 @@ const DualField = styled(Box)`
 `
 
 const FormField = styled(Field).attrs({ bg: 'white', mb: 3 })`
+  font-family: ${theme.serif};
   border: 0 !important;
   &:focus {
     box-shadow: 0 0 0 1px ${theme.colors.primary};
@@ -30,7 +31,7 @@ const FormField = styled(Field).attrs({ bg: 'white', mb: 3 })`
 
 const Explanation = styled(Text).attrs({
   fontSize: 1,
-  color: 'muted',
+  color: 'slate',
   mt: -2,
   mb: 3
 })``
@@ -137,12 +138,12 @@ export default class Registration extends Component {
                 jsCookie.set('signedUp', 'true')
 
                 /*FS.identify(attendee.email, {
-              displayName: `${attendee.first_name} ${attendee.last_name}`,
-              email: attendee.email,
-              school: attendee.school,
-              grade: attendee.grade,
-              referrer: attendee.referrer
-            })*/
+                  displayName: `${attendee.first_name} ${attendee.last_name}`,
+                  email: attendee.email,
+                  school: attendee.school,
+                  grade: attendee.grade,
+                  referrer: attendee.referrer
+                })*/
               }
             })
         }}
@@ -315,7 +316,7 @@ export default class Registration extends Component {
               Any kind of laptop or computer works—just let us know if you won’t
               have access to one for the event.
             </Explanation>
-            <Box my={3}>
+            <Box mt={[3, 4]} mb={3}>
               <Heading.h3>Emergency Contact Information</Heading.h3>
               <Text>
                 In case of emergency, we need to be able to reach your
@@ -340,7 +341,7 @@ export default class Registration extends Component {
               value={values.emergency_phone}
               onChange={handleChange}
             />
-            <Heading.h3 mt={3} mb={2}>
+            <Heading.h3 mt={[3, 4]} mb={2}>
               Additional Details
             </Heading.h3>
             <FormField
@@ -363,6 +364,7 @@ export default class Registration extends Component {
             />
             <LargeButton
               mt={2}
+              fontSize={[2, 3]}
               bg="alt"
               type="submit"
               onClick={handleSubmit}

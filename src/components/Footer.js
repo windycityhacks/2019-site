@@ -18,12 +18,7 @@ const Service = ({ href, service, ...props }) => (
 )
 
 const Footer = ({ children }) => (
-  <Box.footer
-    py={[4, 5]}
-    bg={theme.colors.primaryWash}
-    color={theme.colors.steel}
-    align="center"
-  >
+  <Box.footer py={[4, 5]} bg="primaryWash" color="steel" align="center">
     {children}
     <Heading.h3 fontSize={3} align="center" caps mb={2}>
       Contact us
