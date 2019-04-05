@@ -9,7 +9,7 @@ import {
 } from '@hackclub/design-system'
 import { date } from 'data'
 import Layout from 'components/Layout'
-import Nav from 'components/Nav'
+import SimpleNav from 'components/SimpleNav'
 import Footer from 'components/Footer'
 import Registration from 'components/Registration'
 import IconButton from 'components/IconButton'
@@ -38,14 +38,14 @@ const ShareButton = ({ children, ...props }) => (
 
 export default () => (
   <Layout bg="primaryLight">
-    {/*<Nav />*/}
-    <Container maxWidth={28} align="center" width={1} pt={[3, 4]} px={3}>
+    <SimpleNav />
+    <Container maxWidth={29} align="center" width={1} pt={[3, 4]} px={3}>
       <Headline color="white">Sign up for Windy City Hacks</Headline>
-      <Text color="smoke" fontSize={[3, 4]} mt={2}>
+      <Text color="primaryWash" fontSize={[3, 4]} mt={2}>
         Your ticket is free, including meals & swag. See you on {date}!
       </Text>
     </Container>
-    <Box.main pb={[4, 5]} px={3}>
+    <Box.main pb={[4, 5]}>
       <Sheet maxWidth={36} mt={4} align="left" color="black">
         <Registration />
       </Sheet>
