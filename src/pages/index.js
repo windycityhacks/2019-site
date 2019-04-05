@@ -22,7 +22,7 @@ import Leadership from 'components/Leadership'
 import Apply from 'components/Apply'
 import Nav from 'components/Nav'
 import Photo from 'components/Photo'
-// import Sponsors from 'components/Sponsors'
+import Sponsors from 'components/Sponsors'
 import Video from 'components/Video'
 
 const Lead = styled(Container.withComponent(Text)).attrs({
@@ -219,7 +219,6 @@ export default () => (
             Let’s chat
           </A>
         </Lead>
-        {/*
         <Headline
           color={theme.colors.slate}
           fontSize={[3, 4]}
@@ -230,7 +229,6 @@ export default () => (
           Additional support from
         </Headline>
         <Sponsors section="additionalSupport" />
-        */}
       </Container>
     </Box.section>
     <Leadership />

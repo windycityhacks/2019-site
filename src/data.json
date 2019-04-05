@@ -83,5 +83,11 @@
     { "name": "Zane Davis-Barrs", "pronouns": "he/him" }
   ],
   "sponsors": [],
-  "additionalSupport": []
+  "additionalSupport": [
+    {
+      "name": "PipeDrive",
+      "link": "https://pipedrive.com",
+      "image": "pipedrive.svg"
+    }
+  ]
 }
