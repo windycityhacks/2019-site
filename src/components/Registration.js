@@ -36,6 +36,33 @@ const Explanation = styled(Text).attrs({
   mb: 3
 })``
 
+const Submitted = () => (
+  <Box align="center">
+    <Text fontSize={4} bold>
+      Thanks for registering!{' '}
+      <span role="img" aria-label="Celebration emoji">
+        🎉
+      </span>
+    </Text>
+    <Text fontSize={2}>You should receive a confirmation email shortly.</Text>
+  </Box>
+)
+
+const SignedUp = ({ unsignup }) => (
+  <Box align="center">
+    <Text fontSize={4} bold>
+      You’ve already signed up!{' '}
+      <span role="img" aria-label="Celebration emoji">
+        🎉
+      </span>
+    </Text>
+    <Text fontSize={3}>
+      If this is an error,{' '}
+      <a onClick={unsignup} href="#" children="click here" />.
+    </Text>
+  </Box>
+)
+
 export default class Registration extends Component {
   state = {
     submitted: false
@@ -45,40 +72,16 @@ export default class Registration extends Component {
     const { submitted } = this.state
     const signedUp = jsCookie.get('signedUp')
 
+    const unsignup = e => {
+      e.preventDefault()
+      jsCookie.remove('signedUp')
+      this.forceUpdate()
+    }
+
     return submitted ? (
-      <Box align="center">
-        <Text fontSize={4} bold>
-          Thanks for registering!{' '}
-          <span role="img" aria-label="Celebration emoji">
-            🎉
-          </span>
-        </Text>
-        <Text fontSize={2}>
-          You should receive a confirmation email shortly.
-        </Text>
-      </Box>
+      <Submitted />
     ) : signedUp ? (
-      <Box align="center">
-        <Text fontSize={4} bold>
-          You’ve already signed up!{' '}
-          <span role="img" aria-label="Celebration emoji">
-            🎉
-          </span>
-        </Text>
-        <Text fontSize={3}>
-          If this is an error,{' '}
-          <a
-            onClick={e => {
-              e.preventDefault()
-              jsCookie.remove('signedUp')
-              this.forceUpdate()
-            }}
-            href="#"
-            children="click here"
-          />
-          .
-        </Text>
-      </Box>
+      <SignedUp unsignup={unsignup} />
     ) : (
       <Formik
         initialValues={{
@@ -137,6 +140,7 @@ export default class Registration extends Component {
                 this.setState({ submitted: true })
                 jsCookie.set('signedUp', 'true')
 
+                /* eslint-ignore */
                 FS.identify(attendee.email, {
                   displayName: `${attendee.first_name} ${attendee.last_name}`,
                   email: attendee.email,
