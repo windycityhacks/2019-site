@@ -31,6 +31,7 @@ class SimpleNav extends Component {
         </Crumb>
         {path[0] && (
           <>
+            <Icon glyph="view-forward" size={24} mx={2} color="primaryWash" />
             <Crumb to={`/${path[0]}`}>{capitalize(path[0])}</Crumb>
           </>
         )}

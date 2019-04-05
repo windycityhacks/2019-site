@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Flex, Box, Container, Link as A } from '@hackclub/design-system'
 import { theme } from 'theme'
 import Action from 'components/Action'
-import Flag from 'components/Flag'
 import Link from 'gatsby-link'
 
 const Base = styled(Box.withComponent('header')).attrs({
@@ -11,8 +10,6 @@ const Base = styled(Box.withComponent('header')).attrs({
   width: 1
 })`
   z-index: 4;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 `
 
 const Inner = styled(Container.withComponent(Flex)).attrs({
@@ -21,12 +18,7 @@ const Inner = styled(Container.withComponent(Flex)).attrs({
   align: 'center',
   mx: 'auto',
   role: 'navigation'
-})`
-  @supports (padding: calc(max(env(safe-area-inset-left)))) {
-    padding-left: calc(max(${theme.space[2]}px, env(safe-area-inset-left)));
-    padding-right: calc(max(${theme.space[2]}px, env(safe-area-inset-right)));
-  }
-`
+})``
 
 const Bar = styled(Box.withComponent('nav'))`
   opacity: 0.875;
@@ -38,6 +30,17 @@ const Bar = styled(Box.withComponent('nav'))`
   }
 `
 
+const Logo = styled(A.withComponent(Link)).attrs({
+  to: '/',
+  color: 'white',
+  fontSize: [3, 4],
+  bold: true
+})`
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+`
+
 const Item = styled(A.withComponent(Link)).attrs({
   color: 'inherit',
   fontSize: [2, 3],
@@ -45,7 +48,6 @@ const Item = styled(A.withComponent(Link)).attrs({
   mx: 3
 })`
   text-transform: uppercase;
-  position: relative;
   display: inline-block;
   cursor: pointer;
 `
@@ -66,7 +68,7 @@ const BtnItem = styled(Action).attrs({
 const Nav = ({ color = 'primary', ...props }) => (
   <Base role="banner" {...props}>
     <Inner color={color}>
-      <Flag />
+      <Logo>Windy City Hacks</Logo>
       <Bar role="navigation" ml={3} align="left">
         {/* <Item to="/location" children="Location" />
         <Item to="/schedule" children="Schedule" /> */}
