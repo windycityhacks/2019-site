@@ -31,14 +31,10 @@ const EmailButton = styled(Button.withComponent('a')).attrs({
   px: 1,
   py: 1
 })`
-  position: absolute;
-  left: -9px;
-  bottom: 0;
   line-height: 0;
-  ${theme.mediaQueries.md} {
-    left: auto;
-    right: 0;
-  }
+  position: absolute;
+  bottom: 0;
+  right: -9px;
 `
 const LeaderName = styled(Text).attrs({ fontSize: [3, 4], mt: 2 })`
   line-height: 1.125;
