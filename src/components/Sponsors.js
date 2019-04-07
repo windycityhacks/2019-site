@@ -28,7 +28,7 @@ const Base = styled(Container).attrs({ maxWidth: 72 })`
 const Sponsors = ({ section = 'sponsors', ...props }) => (
   <Base {...props}>
     {data[section].map(sponsor => (
-      <a href={`${sponsor.link}`} key={sponsor.image}>
+      <a href={`${sponsor.link}`} target="_blank" key={sponsor.image}>
         <img alt={sponsor.name} src={`/sponsors/${sponsor.image}`} />
       </a>
     ))}
