@@ -214,12 +214,12 @@ export default class Registration extends Component {
               <option value="" default>
                 Select grade
               </option>
-              <option value="7">7th (Class of ’25)</option>
-              <option value="8">8th (Class of ’24)</option>
-              <option value="9">9th (Class of ’23)</option>
-              <option value="10">10th (Class of ’22)</option>
-              <option value="11">11th (Class of ’21)</option>
-              <option value="12">12th (Class of ’20)</option>
+              <option value="Prev. 12th">Class of ’19 (Prev. 12th)</option>
+              <option value="Incoming 12th">Class of ’20 (Incoming 12th)</option>
+              <option value="Incoming 11th">Class of ’21 (Incoming 11th)</option>
+              <option value="Incoming 10th">Class of ’22 (Incoming 10th)</option>
+              <option value="Incoming 9th">Class of ’23 (Incoming 9th)</option>
+              <option value="Incoming 8th">Class of ’24 (Incoming 8th)</option>
             </FormField>
             <Explanation>As of the 2019–20 school year.</Explanation>
             <FormField
