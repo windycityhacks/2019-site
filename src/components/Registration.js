@@ -221,7 +221,7 @@ export default class Registration extends Component {
               <option value="11">11th (Class of ’20)</option>
               <option value="12">12th (Class of ’19)</option>
             </FormField>
-            <Explanation>As of the 2018–19 school year.</Explanation>
+            <Explanation>As of the 2019–20 school year.</Explanation>
             <FormField
               type="text"
               name="dietary_restrictions"
