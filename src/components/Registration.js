@@ -105,7 +105,6 @@ export default class Registration extends Component {
     ) : (
       <Formik
         validationSchema={schema}
-        validateOnChange
         onSubmit={(attendee, { setSubmitting }) => {
           setSubmitting(true)
           const ENDPOINT =
