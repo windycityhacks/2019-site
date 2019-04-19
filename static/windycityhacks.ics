@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20190622T120000
+DTEND:20190623T120000
+LOCATION:Chicago, IL
+DESCRIPTION:Build something amazing at Windy City Hacks, Chicago's 24-hour high school hackathon. Whether you've never coded before or are super experienced, you'll make something amazing in 24 hours of free food, prizes, & fun. More info & registration: https://windyhacks.com
+SUMMARY:Windy City Hacks
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR
