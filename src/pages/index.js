@@ -217,6 +217,7 @@ export default () => (
             Let’s chat
           </A>
         </Lead>
+        <Sponsors section="sponsors" />
         <Headline
           color={theme.colors.slate}
           fontSize={[3, 4]}

@@ -82,7 +82,13 @@
     { "name": "Theo Bleier", "pronouns": "he/him" },
     { "name": "Zane Davis-Barrs", "pronouns": "he/him" }
   ],
-  "sponsors": [],
+  "sponsors": [
+    {
+      "name": "Hack Club Bank",
+      "link": "https://hackclub.com/bank",
+      "image": "hackclub-bank.svg"
+    }
+  ],
   "additionalSupport": [
     {
       "name": "PipeDrive",
