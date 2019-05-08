@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Box, Container, Heading, Text, theme } from '@hackclub/design-system'
+import { Box, Container, Heading, Text } from '@hackclub/design-system'
 import Nav from 'components/Nav'
 import Action from 'components/Action'
 
@@ -73,10 +73,10 @@ export default class Header extends PureComponent {
 
   render() {
     const { scroll } = this.state
-    return (
+    return [
+      <Nav color="primaryLight" />,
       <Base color="primary" align="center">
         <Background />
-        <Nav color="primaryLight" />
         <Container
           maxWidth={72}
           width={1}
@@ -111,6 +111,6 @@ export default class Header extends PureComponent {
           </Action>
         </Container>
       </Base>
-    )
+    ]
   }
 }

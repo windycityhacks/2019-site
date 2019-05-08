@@ -23,6 +23,7 @@ const Bar = styled(Flex.withComponent('nav')).attrs({
 
 const Item = styled(A.withComponent(Link)).attrs({
   fontSize: [2, 3],
+  px: 3,
   py: 2
 })`
   color: inherit !important;
@@ -31,27 +32,12 @@ const Item = styled(A.withComponent(Link)).attrs({
   cursor: pointer;
 `
 
-const BtnItem = styled(Action).attrs({
-  inverted: true,
-  fontSize: [2, 3],
-  scale: true,
-  px: 3,
-  py: 2
-})`
-  box-shadow: ${theme.boxShadows[0]} !important;
-  text-transform: uppercase;
-`
-
 const Nav = ({ color = 'white', ...props }) => (
   <Base role="banner" {...props}>
-    <Bar role="navigation" color={color}>
+    <Bar role="navigation" color={theme.colors[color]}>
       <Item to="/schedule" children="Schedule" />
-      <Flag mx={[3, 4]} />
-      {color === 'white' ? (
-        <BtnItem bg={theme.colors.alt} to="/register" children="Register" />
-      ) : (
-        <Item to="/register" children="Register" />
-      )}
+      <Flag mx={[2, 3]} />
+      <Item to="/register" children="Register" />
     </Bar>
   </Base>
 )
