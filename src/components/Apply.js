@@ -4,6 +4,7 @@ import { Box, Section, Container, Heading, Text } from '@hackclub/design-system'
 import { theme } from 'theme'
 import Action from 'components/Action'
 
+/*
 const Art = styled(Box)`
   width: 128px;
   height: 128px;
@@ -23,6 +24,7 @@ const Art = styled(Box)`
     bottom: -8%;
   }
 `
+*/
 
 const Apply = props => (
   <Section
@@ -30,8 +32,6 @@ const Apply = props => (
     style={{ position: 'relative', overflow: 'hidden' }}
     {...props}
   >
-    <Art src="tree--sm" style={{ left: '10%' }} />
-    <Art src="wind" style={{ right: '8%' }} />
     <Container maxWidth={36} px={3} py={4} style={{ zIndex: 1 }}>
       <Heading.h2 fontSize={[5, 6]}>Register now.</Heading.h2>
       <Text fontSize={[3, 4]} my={3}>
