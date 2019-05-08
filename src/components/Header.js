@@ -76,7 +76,7 @@ export default class Header extends PureComponent {
     return (
       <Base color="primary" align="center">
         <Background />
-        <Nav hideLinks />
+        <Nav color="primaryLight" />
         <Container
           maxWidth={72}
           width={1}

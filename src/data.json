@@ -95,5 +95,97 @@
       "link": "https://pipedrive.com",
       "image": "pipedrive.svg"
     }
+  ],
+  "schedule": [
+    {
+      "date": "Sat, June 22",
+      "events": [
+        {
+          "time": "11:00am",
+          "name": "Doors Open",
+          "emoji": "👋"
+        },
+        {
+          "time": "12:00pm",
+          "name": "Opening Ceremony",
+          "emoji": "📢"
+        },
+        {
+          "time": "12:30pm",
+          "name": "Hacking Begins",
+          "emoji": "👩‍💻"
+        },
+        {
+          "time": "12:30pm",
+          "name": "Team Formation (optional)",
+          "emoji": "👥"
+        },
+        {
+          "time": "1:00pm",
+          "name": "Workshop: Your First Website",
+          "emoji": "🧙"
+        },
+        {
+          "time": "2:30pm",
+          "name": "Workshop: To Be Announced!",
+          "emoji": "🌀"
+        },
+        {
+          "time": "4:00pm",
+          "name": "Workshop: To Be Announced!",
+          "emoji": "🌀"
+        },
+        {
+          "time": "6:30pm",
+          "name": "Dinner",
+          "emoji": "🍽️"
+        }
+      ]
+    },
+    {
+      "date": "Sun, June 23",
+      "events": [
+        {
+          "time": "12:00am",
+          "name": "Midnight Snack",
+          "emoji": "🍦"
+        },
+        {
+          "time": "2:00am",
+          "name": "DANCE PARTY!",
+          "emoji": "💃"
+        },
+        {
+          "time": "3:30am",
+          "name": "Game Break",
+          "emoji": "👾"
+        },
+        {
+          "time": "7:00am",
+          "name": "Breakfast",
+          "emoji": "🍳"
+        },
+        {
+          "time": "8:30am",
+          "name": "Hacking Ends",
+          "emoji": "⌛"
+        },
+        {
+          "time": "9:00am",
+          "name": "Judging",
+          "emoji": "💬"
+        },
+        {
+          "time": "11:30am",
+          "name": "Closing Ceremony",
+          "emoji": "📢"
+        },
+        {
+          "time": "12:00pm",
+          "name": "Event Ends",
+          "emoji": "😭"
+        }
+      ]
+    }
   ]
 }
