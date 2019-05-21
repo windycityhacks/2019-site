@@ -82,6 +82,16 @@
   ],
   "sponsors": [
     {
+      "name": "Hearken",
+      "link": "https://hearken.com",
+      "image": "hearken.png"
+    },
+    {
+      "name": "Slack",
+      "link": "https://slack.com",
+      "image": "slack.svg"
+    },
+    {
       "name": "Hack Club Bank",
       "link": "https://hackclub.com/bank",
       "image": "hackclub-bank.svg"
