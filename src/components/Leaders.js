@@ -52,7 +52,7 @@ const Leader = ({ name, pronouns }) => (
       <Avatar src={`/team/${username(name)}.jpg`} alt={name} />
       <EmailButton
         circle
-        title={`Email ${username(name)}`}
+        title={`Email ${name.split(' ')[0]}`}
         href={`mailto:${username(name)}@windyhacks.com`}
         children={<Icon glyph="email" size={24} />}
       />

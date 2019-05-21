@@ -207,7 +207,7 @@ export default () => (
           Want to sponsor Windy City Hacks & help hundreds of students
           experience the magic of code?{' '}
           <A
-            href="mailto:theo@windyhacks.com"
+            href="mailto:matthew@windyhacks.com"
             color={theme.colors.primary}
             className="sans"
             hoverline
