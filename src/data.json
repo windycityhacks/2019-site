@@ -99,6 +99,11 @@
   ],
   "additionalSupport": [
     {
+      "name": "Sketch",
+      "link": "https://sketchapp.com/",
+      "image": "sketch.svg"
+    },
+    {
       "name": "PipeDrive",
       "link": "https://pipedrive.com",
       "image": "pipedrive.svg"
