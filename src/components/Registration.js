@@ -83,6 +83,179 @@ const schema = yup.object().shape({
   referrer: yup.string().required(REQUIRED_STRING)
 })
 
+const formContent = ({
+  values,
+  touched,
+  errors,
+  handleChange,
+  handleBlur,
+  handleSubmit,
+  isSubmitting
+}) => {
+  const field = name => ({
+    name,
+    value: values[name] === null ? '' : values[name],
+    onChange: handleChange,
+    onBlur: handleBlur,
+    error: touched[name] && errors[name]
+  })
+  return (
+    <form onSubmit={handleSubmit}>
+      <Box mb={3}>
+        <Heading.h3>Attendee Information</Heading.h3>
+        <Text>We can’t wait to meet you!</Text>
+      </Box>
+      <DualField>
+        <FormField
+          {...field('first_name')}
+          label="First name"
+          placeholder="Margaret"
+        />
+        <FormField
+          {...field('last_name')}
+          label="Last name"
+          placeholder="Hamilton"
+        />
+        <FormField
+          {...field('email')}
+          type="email"
+          label="Email"
+          placeholder="margaret@windyhacks.com"
+        />
+        <FormField
+          {...field('phone_number')}
+          type="tel"
+          label="Phone number"
+          placeholder="312-555-5555"
+        />
+      </DualField>
+      <FormField {...field('pronouns')} type="select" label="Pronouns">
+        <option value="" default>
+          Select pronouns
+        </option>
+        <option value="She/her">She/her</option>
+        <option value="He/him">He/him</option>
+        <option value="They/them">They/them</option>
+        <option value="Other">Other</option>
+        <option value="Prefer not to answer">Prefer not to answer</option>
+      </FormField>
+      <Explanation>
+        Will be displayed on your badge. More info:{' '}
+        <a
+          href="https://en.wikipedia.org/wiki/Personal_pronoun"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Wikipedia
+        </a>
+      </Explanation>
+      <FormField
+        {...field('school')}
+        label="School"
+        placeholder="Hacking High School"
+      />
+      <FormField {...field('grade')} type="select" label="Grade">
+        <option value="" default>
+          Select grade
+        </option>
+        <option value="Prev. 12th">Class of ’19 (Prev. 12th)</option>
+        <option value="Incoming 12th">Class of ’20 (Incoming 12th)</option>
+        <option value="Incoming 11th">Class of ’21 (Incoming 11th)</option>
+        <option value="Incoming 10th">Class of ’22 (Incoming 10th)</option>
+        <option value="Incoming 9th">Class of ’23 (Incoming 9th)</option>
+        <option value="Incoming 8th">Class of ’24 (Incoming 8th)</option>
+      </FormField>
+      <Explanation>As of the 2019–20 school year.</Explanation>
+      <FormField
+        {...field('dietary_restrictions')}
+        type="text"
+        label="Dietary restrictions"
+        placeholder="Vegetarian, gluten free, etc (optional)"
+      />
+      <FormField {...field('shirt_size')} type="select" label="Shirt size">
+        <option value="" default>
+          Select size
+        </option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </FormField>
+      <FormField {...field('travel')} type="select" label="Travel method">
+        <option value="" default>
+          Select travel plans
+        </option>
+        <option value="Attendee handles it">Handling my own travel</option>
+        <option value="Interested in travel reimbursement">
+          Interested in travel reimbursement
+        </option>
+      </FormField>
+      <Explanation>
+        If you select travel reimbursement, we’ll contact you later with
+        details.
+      </Explanation>
+      <FormField {...field('computer')} type="select" label="Computer">
+        <option value="" default>
+          Select computer option
+        </option>
+        <option value="Attendee brings computer">
+          Bringing my own computer
+        </option>
+        <option value="Needs a computer">In need of a provided computer</option>
+      </FormField>
+      <Explanation>
+        Any kind of laptop or computer works—just let us know if you won’t have
+        access to one for the event.
+      </Explanation>
+      <Box mt={[3, 4]} mb={3}>
+        <Heading.h3>Emergency Contact Information</Heading.h3>
+        <Text>
+          In case of emergency, we need to be able to reach your
+          parent/guardian/etc. No spam or newsletters.
+        </Text>
+      </Box>
+      <FormField
+        {...field('emergency_email')}
+        type="text"
+        label="Emergency contact email"
+        placeholder="margaret@windyhacks.com"
+      />
+      <FormField
+        {...field('emergency_phone')}
+        type="tel"
+        label="Emergency contact phone number"
+        placeholder="773-555-5555"
+      />
+      <Heading.h3 mt={[3, 4]} mb={2}>
+        Additional Details
+      </Heading.h3>
+      <FormField
+        {...field('referrer')}
+        label="How did you hear about us?"
+        placeholder="Teacher, principal, friend’s name, etc"
+      />
+      <FormField
+        {...field('note')}
+        type="textarea"
+        label="Questions, comments, etc"
+        placeholder="Tell us your thoughts… (optional)"
+      />
+      <LargeButton
+        mt={2}
+        fontSize={[2, 3]}
+        bg="alt"
+        type="submit"
+        onClick={handleSubmit}
+        disabled={isSubmitting}
+        scale
+      >
+        Claim my spot
+      </LargeButton>
+    </form>
+  )
+}
+
 export default class Registration extends Component {
   state = {
     submitted: false
@@ -104,7 +277,10 @@ export default class Registration extends Component {
       <SignedUp unsignup={unsignup} />
     ) : (
       <Formik
+        render={formContent}
+        // initialValues={defaultValues}
         validationSchema={schema}
+        validateOnBlur
         onSubmit={(attendee, { setSubmitting }) => {
           setSubmitting(true)
           const ENDPOINT =
@@ -115,243 +291,14 @@ export default class Registration extends Component {
               this.setState({ submitted: true })
               jsCookie.set('signedUp', 'true')
 
-              const displayName = `${attendee.first_name} ${attendee.last_name}`
+              /* const displayName = `${attendee.first_name} ${attendee.last_name}`
               const { email, school, grade, referrer } = attendee
               const profile = { displayName, email, school, grade, referrer }
-              /* if (typeof FS !== 'undefined') FS.identify(email, profile) */
+              if (typeof FS !== 'undefined') FS.identify(email, profile) */
             }
           })
         }}
-      >
-        {({ values, errors, handleChange, handleSubmit, isSubmitting }) => (
-          <form onSubmit={handleSubmit}>
-            <Box mb={3}>
-              <Heading.h3>Attendee Information</Heading.h3>
-              <Text>We can’t wait to meet you!</Text>
-            </Box>
-            <DualField>
-              <FormField
-                type="text"
-                name="first_name"
-                label="First name"
-                placeholder="Margaret"
-                error={errors.first_name}
-                value={values.first_name}
-                onChange={handleChange}
-              />
-              <FormField
-                type="text"
-                name="last_name"
-                label="Last name"
-                placeholder="Hamilton"
-                error={errors.last_name}
-                value={values.last_name}
-                onChange={handleChange}
-              />
-              <FormField
-                type="email"
-                name="email"
-                label="Email"
-                placeholder="margaret@windyhacks.com"
-                error={errors.email}
-                value={values.email}
-                onChange={handleChange}
-              />
-              <FormField
-                type="tel"
-                name="phone_number"
-                label="Phone number"
-                placeholder="312-555-5555"
-                error={errors.phone_number}
-                value={values.phone_number}
-                onChange={handleChange}
-              />
-            </DualField>
-            <FormField
-              type="select"
-              name="pronouns"
-              label="Pronouns"
-              error={errors.pronouns}
-              value={values.pronouns}
-              onChange={handleChange}
-            >
-              <option value="" default>
-                Select pronouns
-              </option>
-              <option value="She/her">She/her</option>
-              <option value="He/him">He/him</option>
-              <option value="They/them">They/them</option>
-              <option value="Other">Other</option>
-              <option value="Prefer not to answer">Prefer not to answer</option>
-            </FormField>
-            <Explanation>
-              Will be displayed on your badge. More info:{' '}
-              <a
-                href="https://en.wikipedia.org/wiki/Personal_pronoun"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Wikipedia
-              </a>
-            </Explanation>
-            <FormField
-              type="text"
-              name="school"
-              label="School"
-              placeholder="Hacking High School"
-              error={errors.school}
-              value={values.school}
-              onChange={handleChange}
-            />
-            <FormField
-              type="select"
-              name="grade"
-              label="Grade"
-              error={errors.grade}
-              value={values.grade}
-              onChange={handleChange}
-            >
-              <option value="" default>
-                Select grade
-              </option>
-              <option value="Prev. 12th">Class of ’19 (Prev. 12th)</option>
-              <option value="Incoming 12th">Class of ’20 (Incoming 12th)</option>
-              <option value="Incoming 11th">Class of ’21 (Incoming 11th)</option>
-              <option value="Incoming 10th">Class of ’22 (Incoming 10th)</option>
-              <option value="Incoming 9th">Class of ’23 (Incoming 9th)</option>
-              <option value="Incoming 8th">Class of ’24 (Incoming 8th)</option>
-            </FormField>
-            <Explanation>As of the 2019–20 school year.</Explanation>
-            <FormField
-              type="text"
-              name="dietary_restrictions"
-              label="Dietary restrictions"
-              placeholder="Vegetarian, gluten free, etc (optional)"
-              error={errors.dietary_restrictions}
-              value={values.dietary_restrictions}
-              onChange={handleChange}
-            />
-            <FormField
-              type="select"
-              name="shirt_size"
-              label="Shirt size"
-              error={errors.shirt_size}
-              value={values.shirt_size}
-              onChange={handleChange}
-            >
-              <option value="" default>
-                Select size
-              </option>
-              <option value="XS">XS</option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-            </FormField>
-            <FormField
-              type="select"
-              name="travel"
-              label="Travel method"
-              error={errors.travel}
-              value={values.travel}
-              onChange={handleChange}
-            >
-              <option value="" default>
-                Select travel plans
-              </option>
-              <option value="Attendee handles it">
-                Handling my own travel
-              </option>
-              <option value="Interested in travel reimbursement">
-                Interested in travel reimbursement
-              </option>
-            </FormField>
-            <Explanation>
-              If you select travel reimbursement, we’ll contact you later with
-              details.
-            </Explanation>
-            <FormField
-              type="select"
-              name="computer"
-              label="Computer"
-              error={errors.computer}
-              value={values.computer}
-              onChange={handleChange}
-            >
-              <option value="" default>
-                Select computer option
-              </option>
-              <option value="Attendee brings computer">
-                Bringing my own computer
-              </option>
-              <option value="Needs a computer">
-                In need of a provided computer
-              </option>
-            </FormField>
-            <Explanation>
-              Any kind of laptop or computer works—just let us know if you won’t
-              have access to one for the event.
-            </Explanation>
-            <Box mt={[3, 4]} mb={3}>
-              <Heading.h3>Emergency Contact Information</Heading.h3>
-              <Text>
-                In case of emergency, we need to be able to reach your
-                parent/guardian/etc. No spam or newsletters.
-              </Text>
-            </Box>
-            <FormField
-              type="text"
-              name="emergency_email"
-              label="Emergency contact email"
-              placeholder="margaret@windyhacks.com"
-              error={errors.emergency_email}
-              value={values.emergency_email}
-              onChange={handleChange}
-            />
-            <FormField
-              type="tel"
-              name="emergency_phone"
-              label="Emergency contact phone number"
-              placeholder="773-555-5555"
-              error={errors.emergency_phone}
-              value={values.emergency_phone}
-              onChange={handleChange}
-            />
-            <Heading.h3 mt={[3, 4]} mb={2}>
-              Additional Details
-            </Heading.h3>
-            <FormField
-              type="text"
-              name="referrer"
-              label="How did you hear about us?"
-              placeholder="Teacher, principal, friend’s name, etc"
-              error={errors.referrer}
-              value={values.referrer}
-              onChange={handleChange}
-            />
-            <FormField
-              type="textarea"
-              name="note"
-              label="Questions, comments, etc"
-              placeholder="Tell us your thoughts… (optional)"
-              error={errors.note}
-              value={values.note}
-              onChange={handleChange}
-            />
-            <LargeButton
-              mt={2}
-              fontSize={[2, 3]}
-              bg="alt"
-              type="submit"
-              onClick={handleSubmit}
-              disabled={isSubmitting}
-              scale
-            >
-              Claim my spot
-            </LargeButton>
-          </form>
-        )}
-      </Formik>
+      />
     )
   }
 }
