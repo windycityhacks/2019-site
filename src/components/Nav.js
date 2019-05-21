@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Flex, Box, Link as A } from '@hackclub/design-system'
 import { theme } from 'theme'
 import Flag from 'components/Flag'
-import Action from 'components/Action'
 import { Link } from 'gatsby'
 
 const Base = styled(Box.withComponent('header')).attrs({
@@ -11,6 +10,9 @@ const Base = styled(Box.withComponent('header')).attrs({
   width: 1
 })`
   z-index: 4;
+  + * {
+    flex: 1 1 auto;
+  }
 `
 
 const Bar = styled(Flex.withComponent('nav')).attrs({

@@ -10,6 +10,7 @@ injectGlobal`
     font-weight: inherit;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    -webkit-text-adjust: none;
     -webkit-appearance: none;
     -moz-appearance: none;
   }
@@ -22,12 +23,8 @@ injectGlobal`
     padding: 0;
     margin: 0;
     position: relative;
-    height: 100%;
     max-height: 100%;
     width: 100%;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
     font-size: ${theme.fontSizes[2]}px;
     font-family: ${config.font};
     font-weight: normal;
@@ -62,6 +59,11 @@ injectGlobal`
   strong,
   b {
     font-weight: 700 !important;
+  }
+  #___gatsby > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   @supports (padding: calc(max(env(safe-area-inset-left)))) {
     #___gatsby > div > * {
