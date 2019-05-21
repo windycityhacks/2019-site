@@ -103,7 +103,7 @@ export default class Header extends PureComponent {
             & fun.
           </Heading.h2>
           <Text fontSize={[3, 4]} color="muted" mb={4}>
-            June 22-23, 2019, Chicago{' '}
+            June 22–23, 2019, Chicago{' '}
             <Text.span color="muted">— Venue&nbsp;TBA</Text.span>
           </Text>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
