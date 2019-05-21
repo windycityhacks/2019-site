@@ -278,7 +278,6 @@ export default class Registration extends Component {
     ) : (
       <Formik
         render={formContent}
-        // initialValues={defaultValues}
         validationSchema={schema}
         validateOnBlur
         onSubmit={(attendee, { setSubmitting }) => {
@@ -291,10 +290,10 @@ export default class Registration extends Component {
               this.setState({ submitted: true })
               jsCookie.set('signedUp', 'true')
 
-              /* const displayName = `${attendee.first_name} ${attendee.last_name}`
+              const displayName = `${attendee.first_name} ${attendee.last_name}`
               const { email, school, grade, referrer } = attendee
               const profile = { displayName, email, school, grade, referrer }
-              if (typeof FS !== 'undefined') FS.identify(email, profile) */
+              if (typeof FS !== 'undefined') FS.identify(email, profile)
             }
           })
         }}

@@ -10,7 +10,7 @@ injectGlobal`
     font-weight: inherit;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-adjust: none;
+    -webkit-text-size-adjust: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
   }
