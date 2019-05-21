@@ -54,7 +54,7 @@ export default () => (
     </Box.header>
     <Schedule>
       {data.schedule.map(day => (
-        <Box mt={[4, 0]}>
+        <Box mt={[4, 0]} px={[2, 0]}>
           <Headline color={theme.colors.primary}>{day.date}</Headline>
           <List mt={3}>
             {day.events.map(event => (
