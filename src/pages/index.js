@@ -96,7 +96,7 @@ export default () => (
         <Container maxWidth={48} mx={0}>
           <Headline color="alt">Welcome to the “hackathon.”</Headline>
           <Lead>
-            Windy City Hacks is a 24-hour event where 350 programmers, artists,
+            Windy City Hacks is a 24-hour event where 200 programmers, artists,
             designers, & other high schoolers from across the Midwest will come
             to together to build apps & games. We’ll provide workshops,
             mentorship, free meals & drinks, and places to sleep. The next
