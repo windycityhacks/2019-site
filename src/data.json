@@ -82,6 +82,11 @@
   ],
   "sponsors": [
     {
+      "name": "Agalmic Ventures",
+      "link": "https://www.agalmicventures.com/",
+      "image": "agalmic.png"
+    },
+    {
       "name": "Hearken",
       "link": "https://hearken.com",
       "image": "hearken.png"
