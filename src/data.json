@@ -92,6 +92,11 @@
       "image": "hearken.png"
     },
     {
+      "name": "Otus",
+      "link": "https://otus.com",
+      "image": "otus.png"
+    },
+    {
       "name": "Slack",
       "link": "https://slack.com",
       "image": "slack.svg"
