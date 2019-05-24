@@ -17,13 +17,11 @@ const Base = styled(Container).attrs({ maxWidth: 72 })`
   a {
     line-height: 0;
     width: 100%;
-    max-height: 4rem;
   }
   img {
     object-fit: contain;
-    max-height: 100%;
-    width: auto;
-    max-width: 100%;
+    object-position: left;
+    max-height: 4rem;
   }
 `
 
