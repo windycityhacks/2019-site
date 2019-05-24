@@ -5,25 +5,25 @@ import data from 'data'
 
 const Base = styled(Container).attrs({ maxWidth: 72 })`
   display: grid;
-  grid-gap: ${theme.space[2]}px;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(${props => (props.section === 'sponsors' ? 16 : 8)}rem, 1fr)
-  );
+  grid-gap: ${theme.space[3]}px;
+  grid-template-columns: repeat(2, 1fr);
   ${theme.mediaQueries.md} {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(${props => (props.section === 'sponsors' ? 21 : 14)}rem, 1fr)
-    );
+    grid-template-columns: repeat(3, 1fr);
+  }
+  ${theme.mediaQueries.lg} {
+    grid-template-columns: repeat(4, 1fr);
   }
   a {
+    display: flex;
+    align-items: center;
     line-height: 0;
     width: 100%;
+    max-height: 4rem;
   }
   img {
-    height: 100%;
-    max-width: 75%;
-    max-height: 4rem;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
   }
 `
 
