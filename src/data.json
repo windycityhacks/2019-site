@@ -87,6 +87,11 @@
       "image": "agalmic.svg"
     },
     {
+      "name": "tastytrade",
+      "link": "https://www.tastytrade.com/",
+      "image": "tastytrade.png"
+    },
+    {
       "name": "Hearken",
       "link": "https://wearehearken.com",
       "image": "hearken.png"
