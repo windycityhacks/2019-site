@@ -73,7 +73,6 @@ const schema = yup.object().shape({
   shirt_size: yup.string().required(REQUIRED_STRING),
   dietary_restrictions: yup.string(),
   travel: yup.string(),
-  computer: yup.string(),
   emergency_email: yup
     .string()
     .required(REQUIRED_STRING)
@@ -194,19 +193,6 @@ const formContent = ({
       <Explanation>
         If you select travel reimbursement, we’ll contact you later with
         details.
-      </Explanation>
-      <FormField {...field('computer')} type="select" label="Computer">
-        <option value="" default>
-          Select computer option
-        </option>
-        <option value="Attendee brings computer">
-          Bringing my own computer
-        </option>
-        <option value="Needs a computer">In need of a provided computer</option>
-      </FormField>
-      <Explanation>
-        Any kind of laptop or computer works—just let us know if you won’t have
-        access to one for the event.
       </Explanation>
       <Box mt={[3, 4]} mb={3}>
         <Heading.h3>Emergency Contact Information</Heading.h3>
