@@ -82,6 +82,11 @@
   ],
   "sponsors": [
     {
+      "name": "ActiveCampaign",
+      "link": "https://activecampaign.com",
+      "image": "activecampaign.svg"
+    },
+    {
       "name": "Agalmic Ventures",
       "link": "https://www.agalmicventures.com/",
       "image": "agalmic.svg"
@@ -112,6 +117,11 @@
       "name": "Sketch",
       "link": "https://sketchapp.com/",
       "image": "sketch.svg"
+    },
+    {
+      "name": "Meeting Tomorrow",
+      "link": "https://meetingtomorrow.com",
+      "image": "meetingtomorrow.png"
     },
     {
       "name": "tastytrade",
