@@ -82,6 +82,11 @@
   ],
   "sponsors": [
     {
+      "name": "8th Light",
+      "link": "https://8thlight.com",
+      "image": "8th-light.svg"
+    },
+    {
       "name": "ActiveCampaign",
       "link": "https://activecampaign.com",
       "image": "activecampaign.svg"
