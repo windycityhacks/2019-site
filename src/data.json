@@ -141,6 +141,11 @@
       "image": "jellyvision.svg"
     },
     {
+      "name": "Quarter Zero",
+      "link": "https://www.quarterzero.com",
+      "image": "quarter-zero.png"
+    },
+    {
       "name": "Tile",
       "link": "https://tile.com/",
       "image": "tile.svg"
@@ -149,6 +154,18 @@
       "name": "tastytrade",
       "link": "https://www.tastytrade.com/",
       "image": "tastytrade.png"
+    }
+  ],
+  "judges": [
+    {
+      "name": "Abril Vela",
+      "link": "https://twitter.com/abril_vela",
+      "image": "abril.png"
+    },
+    {
+      "name": "Nate Kontny",
+      "link": "https://twitter.com/natekontny",
+      "image": "nate.png"
     }
   ],
   "schedule": [
