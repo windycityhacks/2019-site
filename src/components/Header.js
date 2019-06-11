@@ -104,7 +104,7 @@ export default class Header extends PureComponent {
           </Heading.h2>
           <Text fontSize={[3, 4]} color="muted" mb={4}>
             June 22–23, 2019, Chicago
-            {' – '}
+            {' – at '}
             <A
               target="_blank"
               rel="noopener noreferrer"
