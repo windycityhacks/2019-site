@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Box, Container, Heading, Text } from '@hackclub/design-system'
+import { Box, Container, Heading, Link as A, Text } from '@hackclub/design-system'
 import Nav from 'components/Nav'
 import Action from 'components/Action'
 
@@ -103,8 +103,17 @@ export default class Header extends PureComponent {
             & fun.
           </Heading.h2>
           <Text fontSize={[3, 4]} color="muted" mb={4}>
-            June 22–23, 2019, Chicago{' '}
-            <Text.span color="muted">— Venue&nbsp;TBA</Text.span>
+            June 22–23, 2019, Chicago
+            {' – '}
+            <A
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://goo.gl/maps/eM27xtUJgshPqa427"
+              color="muted"
+              underline
+            >
+              Origami Risk
+            </A>
           </Text>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
             Sign up now
