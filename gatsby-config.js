@@ -47,7 +47,6 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-lodash',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify',
     'gatsby-plugin-no-sourcemaps'
