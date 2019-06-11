@@ -45,11 +45,13 @@
     "image": "https://windyhacks.com/flag.png",
     "location": {
       "@type": "Place",
-      "name": "Venue TBA",
+      "name": "Origami Risk",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Chicago",
-        "addressRegion": "IL"
+        "addressRegion": "IL",
+        "postalCode": "60601",
+        "streetAddress": "222 N LaSalle St #2125"
       }
     },
     "sponsor": {
