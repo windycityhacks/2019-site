@@ -107,9 +107,19 @@
       "image": "otus.png"
     },
     {
+      "name": "Repl.it",
+      "link": "https://repl.it",
+      "image": "replit.png"
+    },
+    {
       "name": "Slack",
       "link": "https://slack.com",
       "image": "slack.svg"
+    },
+    {
+      "name": "Jellyvision",
+      "link": "https://jellyvision.com",
+      "image": "jellyvision.svg"
     },
     {
       "name": "Hack Club Bank",
