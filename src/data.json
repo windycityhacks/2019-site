@@ -119,13 +119,8 @@
       "image": "slack.svg"
     },
     {
-      "name": "Jellyvision",
-      "link": "https://jellyvision.com",
-      "image": "jellyvision.svg"
-    },
-    {
       "name": "Hack Club Bank",
-      "link": "https://hackclub.com/bank",
+      "link": "https://hackclub.com/bank/",
       "image": "hackclub-bank.svg"
     }
   ],
@@ -141,14 +136,19 @@
       "image": "meetingtomorrow.png"
     },
     {
+      "name": "Jellyvision",
+      "link": "https://jellyvision.com",
+      "image": "jellyvision.svg"
+    },
+    {
+      "name": "Tile",
+      "link": "https://tile.com/",
+      "image": "tile.svg"
+    },
+    {
       "name": "tastytrade",
       "link": "https://www.tastytrade.com/",
       "image": "tastytrade.png"
-    },
-    {
-      "name": "PipeDrive",
-      "link": "https://pipedrive.com",
-      "image": "pipedrive.svg"
     }
   ],
   "schedule": [
