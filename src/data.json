@@ -94,6 +94,11 @@
       "image": "origami-risk.png"
     },
     {
+      "name": "GitHub",
+      "link": "https://github.com/",
+      "image": "github.png"
+    },
+    {
       "name": "ActiveCampaign",
       "link": "https://activecampaign.com",
       "image": "activecampaign.svg"
