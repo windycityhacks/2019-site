@@ -189,12 +189,11 @@ export default () => (
             body={
               <>
                 We’re independently-organized by high schoolers, sponsored via
-                an international non-profit called{' '}
+                an international nonprofit called{' '}
                 <A href="https://hackclub.com" color="alt" underline>
                   Hack Club
                 </A>
-                . The event is fully supervised by several dozen adult mentors
-                and chaperones (with background checks).
+                . It’s fully supervised by 20+ adult mentors & chaperones.
               </>
             }
           />
