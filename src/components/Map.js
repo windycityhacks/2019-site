@@ -8,10 +8,11 @@ const TOKEN =
   'pk.eyJ1IjoiaGFja2NsdWIiLCJhIjoiY2pscGI1eGdhMGRyNzN3bnZvbGY5NDBvZSJ9.Zm4Zduj94TrgU8h890M7gA'
 
 const Base = styled(Box)`
-  width: 100%;
+  overflow: hidden;
+  z-index: 1;
   padding: 0 !important;
   > div {
-    min-height: 16rem;
+    width: 100% !important;
   }
 `
 
@@ -49,13 +50,12 @@ class Map extends Component {
   render() {
     const { viewport } = this.state
     return (
-      <Base p={0} {...this.props}>
+      <Base {...this.props}>
         <MapGL
           mapStyle="mapbox://styles/mapbox/streets-v10"
           mapboxApiAccessToken={TOKEN}
           {...viewport}
           onViewportChange={viewport => this.setState({ viewport })}
-          style={{ minHeight: '256px' }}
         >
           <Nav>
             <NavigationControl />

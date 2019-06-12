@@ -28,7 +28,6 @@ const Grid = styled(Container)`
   > a,
   > img {
     width: 100%;
-    // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.125);
     border-radius: ${theme.radii[2]};
     max-width: 100%;
     min-height: 16rem;
@@ -138,7 +137,7 @@ export default () => (
         </Headline>
         <Text my={3}>
           Origami Risk is a software company in downtown Chicago generously
-          providing their venue for the event.
+          providing their headquarters for the event venue.
         </Text>
         <Text
           fontSize={[3, 4]}
@@ -211,7 +210,7 @@ export default () => (
         body="Accessibility is core to our mission. We’re offering a few dozen attendees $30 travel reimbursements. Make sure to bring your receipts to the event."
       />
       <GridItemModule
-        icon="explore"
+        icon="relaxed"
         name="Sleeping arrangements"
         iconColor={theme.colors.cool}
         body="Sleeping during the event is optional, but adults recommended
