@@ -1,8 +1,8 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
 import styled from 'styled-components'
+import { Sheet } from '@hackclub/design-system'
 import { theme } from 'theme'
-import Sheet from 'components/Sheet'
 
 const Base = styled(Sheet)`
   width: 100%;
@@ -16,6 +16,7 @@ const Pin = styled.span`
   width: 2rem;
   height: 2rem;
   display: inline-block;
+  transform: translateX(-50%) translateY(-50%);
   border-radius: 1rem;
   background-color: ${theme.colors.alt};
   background-image: url(${require('../../static/flag-bright.png')});
@@ -25,7 +26,7 @@ const Pin = styled.span`
 const Map = ({ center, zoom, ...props }) => (
   <Base {...props}>
     <GoogleMapReact
-      bootstrapURLKeys={{ key: 'AIzaSyAdb4UQl8l0RjG8CLKSuRWBNNUC2yiiIU8' }}
+      bootstrapURLKeys={{ key: 'AIzaSyDh_yh-nKzp_8so8APsLGxtAiCpx-VpwjU' }}
       defaultCenter={center}
       defaultZoom={zoom}
     >
@@ -39,7 +40,7 @@ Map.defaultProps = {
     lat: 41.886419,
     lng: -87.632579
   },
-  zoom: 12,
+  zoom: 17,
   p: 0
 }
 

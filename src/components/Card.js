@@ -8,6 +8,19 @@ const Card = styled(Flex).attrs({
   bg: 'primaryWash'
 })`
   border-radius: ${theme.radii[2]};
+  background-image: radial-gradient(
+    ellipse farthest-corner at top left,
+    ${theme.colors.primaryWashLight},
+    ${theme.colors.primaryWash}
+  );
+
+  &:nth-of-type(even) {
+    background-image: radial-gradient(
+      ellipse farthest-corner at top right,
+      ${theme.colors.primaryWashLight},
+      ${theme.colors.primaryWash}
+    );
+  }
 
   h3 {
     line-height: 1.125;

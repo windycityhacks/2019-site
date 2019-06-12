@@ -16,6 +16,7 @@ export const colors = {
   // brand
   primary: '#007a87',
   primaryWash: '#bfe6ea',
+  primaryWashLight: '#dffbfd',
   primaryLight: '#009aab',
   primaryDark: '#004f58',
   alt: '#ff5a5f',

@@ -4,13 +4,15 @@ import { Box, Flex, Heading, Icon, Text } from '@hackclub/design-system'
 import { theme } from 'theme'
 import PropTypes from 'prop-types'
 
-const Base = styled(Flex).attrs({ flexDirection: ['row', 'column'] })`
+const Base = styled(Flex).attrs({ flexDirection: 'column' })`
   ${props =>
     props.lg &&
     css`
-      svg {
-        width: 64px;
-        height: 64px;
+      ${theme.mediaQueries.md} {
+        svg {
+          width: 64px;
+          height: 64px;
+        }
       }
     `};
 `
@@ -21,30 +23,35 @@ const Module = ({
   body,
   lg,
   iconColor = theme.colors.alt,
+  iconTag,
   ...props
 }) => (
   <Base lg={lg} {...props}>
-    <Icon
-      size={48}
-      ml={lg ? -2 : -1}
-      mr={[3, null, 0]}
-      mb={1}
-      glyph={icon}
-      color={iconColor || 'inherit'}
-      style={{ flexShrink: 0 }}
-    />
-    <Box>
-      <Heading.h3 mb={1} fontSize={lg ? [4, 5] : 4} children={name} />
-      {body && (
-        <Text
-          fontSize={3}
-          style={{ lineHeight: '1.375' }}
-          children={body}
-          mb={props.children && 2}
+    <Flex
+      align={['center', 'flex-start']}
+      flexDirection={['row', 'column']}
+      mb={2}
+    >
+      {iconTag || (
+        <Icon
+          size={48}
+          ml={lg ? -2 : -1}
+          mr={3}
+          mb={[0, 1]}
+          glyph={icon}
+          color={iconColor || 'inherit'}
+          style={{ flexShrink: 0 }}
         />
       )}
-      {props.children}
-    </Box>
+      <Heading.h3
+        mb={[0, 1]}
+        fontSize={lg ? [4, 5] : 4}
+        align="left"
+        children={name}
+      />
+    </Flex>
+    {body && <Text fontSize={3} children={body} mb={props.children && 2} />}
+    {props.children}
   </Base>
 )
 
@@ -54,6 +61,8 @@ Module.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   body: PropTypes.string,
+  iconColor: PropTypes.string,
+  iconTag: PropTypes.node,
   lg: PropTypes.bool
 }
 

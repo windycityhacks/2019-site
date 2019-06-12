@@ -37,8 +37,9 @@ const Item = styled(A.withComponent(Link)).attrs({
 const Nav = ({ color = 'white', ...props }) => (
   <Base role="banner" {...props}>
     <Bar role="navigation" color={theme.colors[color]}>
+      <Flag mr={[2, 3]} />
       <Item to="/schedule" children="Schedule" />
-      <Flag mx={[2, 3]} />
+      <Item to="/venue" children="Venue" />
       <Item to="/register" children="Register" />
     </Bar>
   </Base>

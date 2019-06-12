@@ -7,6 +7,7 @@ import {
   Link as A,
   Text
 } from '@hackclub/design-system'
+import { Link } from 'gatsby'
 import Nav from 'components/Nav'
 import Action from 'components/Action'
 
@@ -57,6 +58,7 @@ const Base = styled(Box.section)`
     top: -1px;
   }
 `
+A.link = A.withComponent(Link)
 
 export default class Header extends PureComponent {
   state = {
@@ -111,15 +113,9 @@ export default class Header extends PureComponent {
           <Text fontSize={[3, 4]} color="muted" mb={4}>
             June 22–23, 2019
             {' @ '}
-            <A
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://goo.gl/maps/eM27xtUJgshPqa427"
-              color="muted"
-              underline
-            >
+            <A.link to="/venue" color="muted" underline>
               Origami Risk, Chicago
-            </A>
+            </A.link>
           </Text>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
             Sign up now

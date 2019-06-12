@@ -271,5 +271,27 @@
         }
       ]
     }
+  ],
+  "parking": [
+    {
+      "name": "One Parking 222 LaSalle",
+      "address": "222 N LaSalle Blvd, Chicago, IL 60601",
+      "url": "https://goo.gl/maps/AbrsxNWhdMXjFxsPA"
+    },
+    {
+      "name": "LaSalle Wacker Garage",
+      "address": "121W W Haddock Pl, Chicago, IL 60601",
+      "url": "https://goo.gl/maps/awSfNVAALqtfcbk77"
+    },
+    {
+      "name": "Chicago Parking Map",
+      "address": "200 N LaSalle St Ste 1540, Chicago, IL 60601",
+      "url": "https://goo.gl/maps/R3iKeWMqG7jjJE6r7"
+    },
+    {
+      "name": "Self Park",
+      "address": "203 N LaSalle Blvd, Chicago, IL 60601",
+      "url": "https://goo.gl/maps/c9ejb2KvPJBfrKuD7"
+    }
   ]
 }

@@ -44,9 +44,9 @@ const Name = styled(Text.span)`
 
 export default () => (
   <Layout>
-    <Box.header bg={theme.colors.alt} pb={[3, 4]}>
+    <Box.header bg={theme.colors.alt}>
       <Nav color="white" />
-      <Container maxWidth={30} align="center" width={1} pt={[3, 4]} px={3}>
+      <Container maxWidth={30} align="center" width={1} py={[3, 4]} px={3}>
         <Headline fontSize={[6, 7, 8]} color="white">
           Schedule
         </Headline>
