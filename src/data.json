@@ -170,12 +170,14 @@
     {
       "name": "Abril Vela",
       "link": "https://twitter.com/abril_vela",
-      "image": "abril.png"
+      "pronouns": "she/her",
+      "bio": "CS4All coordinator at Chicago Public Schools. Associate board member of We All Code."
     },
     {
       "name": "Nate Kontny",
       "link": "https://twitter.com/natekontny",
-      "image": "nate.png"
+      "pronouns": "he/him",
+      "bio": "CTO @ Rockstar Coders, writer, and vlogger. Prev. CEO of Highrise, 2x Y Combinator alum."
     }
   ],
   "schedule": [

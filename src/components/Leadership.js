@@ -4,7 +4,7 @@ import Leaders from 'components/Leaders'
 
 const Leadership = () => (
   <Box.section id="leadership">
-    <Container maxWidth={72} width={1} pb={[4, 5]} px={3}>
+    <Container maxWidth={72} width={1} pb={[5, 6]} px={3}>
       <Heading.h2 color="alt" fontSize={[5, 6]} mb={2}>
         Leadership
       </Heading.h2>

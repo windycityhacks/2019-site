@@ -21,6 +21,7 @@ import Leadership from 'components/Leadership'
 import Apply from 'components/Apply'
 import Photo from 'components/Photo'
 import Sponsors from 'components/Sponsors'
+import Judging from 'components/Judging'
 import Video from 'components/Video'
 
 const Lead = styled(Container.withComponent(Text)).attrs({
@@ -201,7 +202,7 @@ export default () => (
       </Container>
     </Box.section>
     <Box.section>
-      <Container maxWidth={72} width={1} px={3} py={[4, 5]}>
+      <Container maxWidth={72} width={1} px={3} py={[5, 6]}>
         <Headline color="alt">Sponsors</Headline>
         <Lead maxWidth={48} mx={0}>
           Want to sponsor Windy City Hacks & help hundreds of students
@@ -230,6 +231,7 @@ export default () => (
         <Sponsors section="additionalSupport" />
       </Container>
     </Box.section>
+    <Judging />
     <Leadership />
     <Apply />
     <Footer />

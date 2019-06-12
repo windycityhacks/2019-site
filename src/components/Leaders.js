@@ -40,7 +40,7 @@ const LeaderName = styled(Text).attrs({
   color: 'steel',
   fontSize: 3,
   bold: true,
-  mt: 2
+  mb: 2
 })`
   font-family: ${theme.font} !important;
   line-height: 1.125;
@@ -49,7 +49,10 @@ const username = a => a.split(' ')[0].toLowerCase()
 const Leader = ({ name, pronouns }) => (
   <Flex align="center">
     <Wrap mr={3}>
-      <Avatar src={`/team/${username(name)}.jpg`} alt={name} />
+      <Avatar
+        src={require(`../../static/team/${username(name)}.jpg`)}
+        alt={name}
+      />
       <EmailButton
         circle
         title={`Email ${name.split(' ')[0]}`}
