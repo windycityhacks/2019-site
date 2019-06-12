@@ -1,10 +1,13 @@
-import React from 'react'
-import GoogleMapReact from 'google-map-react'
+import React, { Component } from 'react'
+import MapGL, { Marker, NavigationControl } from 'react-map-gl'
 import styled from 'styled-components'
-import { Sheet } from '@hackclub/design-system'
+import { Box } from '@hackclub/design-system'
 import { theme } from 'theme'
 
-const Base = styled(Sheet)`
+const TOKEN =
+  'pk.eyJ1IjoiaGFja2NsdWIiLCJhIjoiY2pscGI1eGdhMGRyNzN3bnZvbGY5NDBvZSJ9.Zm4Zduj94TrgU8h890M7gA'
+
+const Base = styled(Box)`
   width: 100%;
   padding: 0 !important;
   > div {
@@ -23,25 +26,47 @@ const Pin = styled.span`
   background-size: 100%;
 `
 
-const Map = ({ center, zoom, ...props }) => (
-  <Base {...props}>
-    <GoogleMapReact
-      bootstrapURLKeys={{ key: 'AIzaSyDh_yh-nKzp_8so8APsLGxtAiCpx-VpwjU' }}
-      defaultCenter={center}
-      defaultZoom={zoom}
-    >
-      <Pin lat={center.lat} lng={center.lng} text="Venue" />
-    </GoogleMapReact>
-  </Base>
-)
+const Nav = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+`
 
-Map.defaultProps = {
-  center: {
-    lat: 41.886419,
-    lng: -87.632579
-  },
-  zoom: 17,
-  p: 0
+class Map extends Component {
+  state = {
+    viewport: {
+      latitude: 41.886419,
+      longitude: -87.632579,
+      zoom: 13,
+      bearing: 0,
+      pitch: 0,
+      width: '100%',
+      height: 300
+    }
+  }
+
+  render() {
+    const { viewport } = this.state
+    return (
+      <Base p={0} {...this.props}>
+        <MapGL
+          mapStyle="mapbox://styles/mapbox/streets-v10"
+          mapboxApiAccessToken={TOKEN}
+          {...viewport}
+          onViewportChange={viewport => this.setState({ viewport })}
+          style={{ minHeight: '256px' }}
+        >
+          <Nav>
+            <NavigationControl />
+          </Nav>
+          <Marker longitude={viewport.longitude} latitude={viewport.latitude}>
+            <Pin />
+          </Marker>
+        </MapGL>
+      </Base>
+    )
+  }
 }
 
 export default Map

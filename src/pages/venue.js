@@ -57,16 +57,6 @@ const GridItem = styled(Card)`
   min-height: unset !important;
 `
 
-const PanoBox = styled(A)`
-  background-image: url(/venue.jpg);
-  background-size: cover;
-  background-position: 25% center;
-  ${theme.mediaQueries.md} {
-    grid-column: span 2;
-    padding: 0 !important;
-  }
-`
-
 const LinkOut = styled(A).attrs({
   color: theme.colors.info,
   underline: true,
@@ -109,11 +99,7 @@ const ParkingItem = ({ name, address, url }) => (
       <ParkingName children={name} />
       <Text fontSize={1} color="muted" children={address} />
     </div>
-    <Icon
-      color={theme.colors.primaryWashLight}
-      glyph="view-forward"
-      size={24}
-    />
+    <Icon color={theme.colors.white} glyph="view-forward" size={24} />
   </ParkingBase>
 )
 const Svg = styled(Box.withComponent('svg'))``
