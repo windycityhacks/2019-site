@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import {
   BackgroundImage,
@@ -106,14 +106,70 @@ const Svg = styled(Box.withComponent('svg'))``
 const Header = styled(BackgroundImage.withComponent('header'))`
   background-position: top center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  position: relative;
   h2 {
     color: inherit;
   }
 `
 
+const VignetteBase = styled.div`
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 122, 135, 0),
+    rgba(0, 122, 135, 0.875)
+  );
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  ~ header,
+  ~ div {
+    z-index: 2;
+  }
+`
+
+class Vignette extends PureComponent {
+  state = {
+    scroll: 0
+  }
+
+  onScroll = () => {
+    const scroll = window.scrollY || document.body.scrollTop
+    this.setState({ scroll })
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScroll)
+    this.onScroll()
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll)
+  }
+
+  render() {
+    const { scroll } = this.state
+    const height = Math.max(
+      document.documentElement.clientHeight,
+      window.innerHeight || 0
+    )
+    return (
+      <VignetteBase
+        style={{
+          willChange: 'opacity',
+          opacity: Math.max(scroll / (height * 0.25), 0)
+        }}
+      />
+    )
+  }
+}
+
 export default () => (
   <Layout>
     <Header src="/venue/header.jpg" bg="primary">
+      <Vignette />
       <Nav />
       <Container
         maxWidth={36}
@@ -125,8 +181,8 @@ export default () => (
         px={3}
       >
         <Headline fontSize={[6, 7, 8]}>Venue</Headline>
-        <Headline mt={[2, 4]} fontSize={[3, 4, 5]}>
-          Welcome to downtown Chicago.
+        <Headline mt={[2, 4]} fontSize={[4, 5]}>
+          Welcome to the Loop in downtown Chicago.
         </Headline>
       </Container>
     </Header>
