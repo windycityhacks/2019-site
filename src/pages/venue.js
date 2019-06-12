@@ -132,7 +132,9 @@ const VignetteBase = styled.div`
 
 class Vignette extends PureComponent {
   state = {
-    scroll: 0
+    scroll: 0,
+    clientHeight: 0,
+    innerHeight: 0
   }
 
   onScroll = () => {
@@ -143,6 +145,10 @@ class Vignette extends PureComponent {
   componentDidMount() {
     window.addEventListener('scroll', this.onScroll)
     this.onScroll()
+    this.setState({
+      clientHeight: document.documentElement.clientHeight,
+      innerHeight: window.innerHeight || 0
+    })
   }
 
   componentWillUnmount() {
@@ -150,11 +156,8 @@ class Vignette extends PureComponent {
   }
 
   render() {
-    const { scroll } = this.state
-    const height = Math.max(
-      document.documentElement.clientHeight,
-      window.innerHeight || 0
-    )
+    const { scroll, clientHeight, innerHeight } = this.state
+    const height = Math.max(clientHeight, innerHeight)
     return (
       <VignetteBase
         style={{
