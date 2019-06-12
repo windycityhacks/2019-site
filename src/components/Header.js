@@ -1,6 +1,12 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Box, Container, Heading, Link as A, Text } from '@hackclub/design-system'
+import {
+  Box,
+  Container,
+  Heading,
+  Link as A,
+  Text
+} from '@hackclub/design-system'
 import Nav from 'components/Nav'
 import Action from 'components/Action'
 
@@ -58,7 +64,7 @@ export default class Header extends PureComponent {
   }
 
   onScroll = () => {
-    const scroll = window.scrollY || document.body.scrollTop
+    const scroll = (window.scrollY || document.body.scrollTop) - 96
     this.setState({ scroll })
   }
 
@@ -103,8 +109,8 @@ export default class Header extends PureComponent {
             & fun.
           </Heading.h2>
           <Text fontSize={[3, 4]} color="muted" mb={4}>
-            June 22–23, 2019, Chicago
-            {' – at '}
+            June 22–23, 2019
+            {' @ '}
             <A
               target="_blank"
               rel="noopener noreferrer"
@@ -112,7 +118,7 @@ export default class Header extends PureComponent {
               color="muted"
               underline
             >
-              Origami Risk
+              Origami Risk, Chicago
             </A>
           </Text>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
