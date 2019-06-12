@@ -104,6 +104,7 @@ const ParkingItem = ({ name, address, url }) => (
 const Svg = styled(Box.withComponent('svg'))``
 
 const Header = styled(BackgroundImage.withComponent('header'))`
+  background-color: ${theme.colors.primary};
   background-position: top center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
   position: relative;
@@ -171,7 +172,7 @@ class Vignette extends PureComponent {
 
 export default () => (
   <Layout>
-    <Header src="/venue/header.jpg" bg="primary">
+    <Header src="/venue/header.jpg">
       <Vignette />
       <Nav />
       <Container
