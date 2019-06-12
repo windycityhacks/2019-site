@@ -1,30 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Box, Section, Container, Heading, Text } from '@hackclub/design-system'
+import { Section, Container, Heading, Text } from '@hackclub/design-system'
 import { theme } from 'theme'
 import Action from 'components/Action'
-
-/*
-const Art = styled(Box)`
-  width: 128px;
-  height: 128px;
-  background-image: url(/art/${props => props.src}.svg);
-  background-size: 100% 100%;
-  position: absolute;
-  z-index: 0;
-  ${theme.mediaQueries.md} {
-    width: 192px;
-    height: 192px;
-  }
-  &:nth-child(1) {
-    left: 10%;
-  }
-  &:nth-child(2) {
-    right: 8%;
-    bottom: -8%;
-  }
-`
-*/
 
 const Apply = props => (
   <Section
