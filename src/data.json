@@ -166,6 +166,11 @@
       "image": "tile.svg"
     },
     {
+      "name": "YouInkIt",
+      "link": "https://youinkit.com",
+      "image": "youinkit.png"
+    },
+    {
       "name": "tastytrade",
       "link": "https://www.tastytrade.com/",
       "image": "tastytrade.png"
