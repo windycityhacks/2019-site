@@ -25,7 +25,7 @@ const Bar = styled(Flex.withComponent('nav')).attrs({
 
 const Item = styled(A.withComponent(Link)).attrs({
   fontSize: [2, 3],
-  px: 3,
+  px: [2, 3],
   py: 2
 })`
   color: inherit !important;
@@ -40,7 +40,11 @@ const Nav = ({ color = 'white', ...props }) => (
       <Flag mr={[2, 3]} />
       <Item to="/schedule" children="Schedule" />
       <Item to="/venue" children="Venue" />
-      <Item to="/register" children="Register" />
+      <Item
+        to="/register"
+        children="Register"
+        style={{ textDecoration: 'line-through' }}
+      />
     </Bar>
   </Base>
 )
