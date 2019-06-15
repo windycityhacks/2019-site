@@ -9,12 +9,16 @@ import {
 } from '@hackclub/design-system'
 import { theme } from 'theme'
 import { Link } from 'gatsby'
+// import Action from 'components/Action'
+// import Calendar from 'components/Calendar'
 import Card from 'components/Card'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import Headline from 'components/Headline'
 import Layout from 'components/Layout'
 import Leadership from 'components/Leadership'
+// import Modules from 'components/Modules'
+import Apply from 'components/Apply'
 import Photo from 'components/Photo'
 import Sponsors from 'components/Sponsors'
 import Judging from 'components/Judging'
@@ -228,6 +232,7 @@ export default () => (
     </Box.section>
     <Judging />
     <Leadership />
+    <Apply />
     <Footer />
   </Layout>
 )

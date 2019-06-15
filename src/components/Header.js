@@ -117,8 +117,8 @@ export default class Header extends PureComponent {
               Origami Risk, Chicago
             </A.link>
           </Text>
-          <Action to="/register" bg="muted" fontSize={[3, 4]}>
-            Registration closed
+          <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
+            Sign up now
           </Action>
         </Container>
       </Base>
