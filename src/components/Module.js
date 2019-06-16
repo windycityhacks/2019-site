@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Box, Flex, Heading, Icon, Text } from '@hackclub/design-system'
+import { Flex, Heading, Icon, Text } from '@hackclub/design-system'
 import { theme } from 'theme'
 import PropTypes from 'prop-types'
 

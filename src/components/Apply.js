@@ -1,17 +1,14 @@
 import React from 'react'
-import { Section, Container, Heading, Text } from '@hackclub/design-system'
+import { Section, Container, Text } from '@hackclub/design-system'
 import { theme } from 'theme'
+import Headline from 'components/Headline'
 import Action from 'components/Action'
 
 const Apply = props => (
-  <Section
-    bg="primary"
-    style={{ position: 'relative', overflow: 'hidden' }}
-    {...props}
-  >
-    <Container maxWidth={36} px={3} py={4} style={{ zIndex: 1 }}>
-      <Heading.h2 fontSize={[5, 6]}>Register now.</Heading.h2>
-      <Text fontSize={[3, 4]} my={3}>
+  <Section bg="primary" {...props}>
+    <Container maxWidth={48} px={3} py={4}>
+      <Headline color="white">Late registration is open.</Headline>
+      <Text color="primaryWash" fontSize={[3, 4]} my={3}>
         We can’t wait to see what you’ll make.
       </Text>
       <Action
@@ -22,7 +19,7 @@ const Apply = props => (
         inverted
         chevronRight
       >
-        Sign up now
+        Register late
       </Action>
     </Container>
   </Section>

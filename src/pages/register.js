@@ -7,7 +7,6 @@ import {
   Text,
   Link
 } from '@hackclub/design-system'
-import { date } from 'data'
 import jsCookie from 'js-cookie'
 import Layout from 'components/Layout'
 import Nav from 'components/Nav'
@@ -42,10 +41,13 @@ const signedUp = () => jsCookie.get('signedUp')
 export default () => (
   <Layout bg="primaryLight">
     <Nav />
-    <Container maxWidth={30} align="center" width={1} pt={[3, 4]} px={3}>
-      <Headline color="white">Sign up for Windy&nbsp;City Hacks</Headline>
+    <Container maxWidth={36} align="center" width={1} pt={[3, 4]} px={3}>
+      <Headline color="white">
+        Late registration for Windy&nbsp;City Hacks
+      </Headline>
       <Text color="primaryWash" fontSize={[3, 4]} mt={2}>
-        Your ticket is free, including meals & swag. See you on {date}!
+        Thanks for the interest! Late registrants aren’t guaranteed a spot, but
+        we’ll do our best.
       </Text>
     </Container>
     <Box.main pb={[4, 5]}>
