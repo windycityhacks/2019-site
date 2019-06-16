@@ -100,10 +100,7 @@ const formContent = ({
   })
   return (
     <form onSubmit={handleSubmit}>
-      <Box mb={3}>
-        <Heading.h3>Attendee Information</Heading.h3>
-        <Text>We can’t wait to meet you!</Text>
-      </Box>
+      <Heading.h3 mb={3}>Attendee Information</Heading.h3>
       <DualField>
         <FormField
           {...field('first_name')}
@@ -198,7 +195,7 @@ const formContent = ({
         <Heading.h3>Emergency Contact Information</Heading.h3>
         <Text>
           In case of emergency, we need to be able to reach your
-          parent/guardian/etc. No spam or newsletters.
+          parent/guardian/etc. No spam.
         </Text>
       </Box>
       <FormField
@@ -236,7 +233,7 @@ const formContent = ({
         disabled={isSubmitting}
         scale
       >
-        Claim my spot
+        Register late
       </LargeButton>
     </form>
   )
@@ -279,7 +276,7 @@ export default class Registration extends Component {
               const displayName = `${attendee.first_name} ${attendee.last_name}`
               const { email, school, grade, referrer } = attendee
               const profile = { displayName, email, school, grade, referrer }
-              if (typeof FS !== 'undefined') FS.identify(email, profile)
+              // if (typeof FS !== 'undefined') FS.identify(email, profile)
             }
           })
         }}
