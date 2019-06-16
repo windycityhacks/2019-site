@@ -7,7 +7,6 @@ import {
   Text,
   Link
 } from '@hackclub/design-system'
-import { date } from 'data'
 import jsCookie from 'js-cookie'
 import Layout from 'components/Layout'
 import Nav from 'components/Nav'
