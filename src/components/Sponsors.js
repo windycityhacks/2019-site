@@ -11,9 +11,6 @@ const Base = styled(Container).attrs({ maxWidth: 72 })`
   ${theme.mediaQueries.md} {
     grid-template-columns: repeat(3, 1fr);
   }
-  ${theme.mediaQueries.lg} {
-    grid-template-columns: repeat(4, 1fr);
-  }
   a {
     line-height: 0;
     width: 100%;
@@ -21,7 +18,15 @@ const Base = styled(Container).attrs({ maxWidth: 72 })`
   img {
     object-fit: contain;
     object-position: left;
-    max-height: 4rem;
+    max-height: 5rem;
+  }
+  &:last-of-type {
+    ${theme.mediaQueries.lg} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    img {
+      max-height: 4rem;
+    }
   }
 `
 
