@@ -42,7 +42,7 @@
     "description": "Register today for 24 hours of coding, fun, free food, and prizes. Windy City Hacks returns June 22, 2019.",
     "isAccessibleForFree": true,
     "url": "https://windyhacks.com",
-    "image": "https://windyhacks.com/flag.png",
+    "image": "https://windyhacks.com/flag-alt-teal.png",
     "location": {
       "@type": "Place",
       "name": "Origami Risk",
@@ -76,11 +76,11 @@
   },
   "leaders": [
     { "name": "Matthew Stanciu", "pronouns": "he/him" },
-    { "name": "Ava Scherocman", "pronouns": "she/her" },
-    { "name": "Amogh Chaubey", "pronouns": "he/him" },
     { "name": "Lachlan Campbell", "pronouns": "they/them" },
+    { "name": "Ava Scherocman", "pronouns": "she/her" },
     { "name": "Joy Liu", "pronouns": "she/her" },
-    { "name": "Michael Parekh", "pronouns": "he/him" }
+    { "name": "Michael Parekh", "pronouns": "he/him" },
+    { "name": "Amogh Chaubey", "pronouns": "he/him" }
   ],
   "sponsors": [
     {
