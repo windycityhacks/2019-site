@@ -46,8 +46,8 @@ export default () => (
         Late registration for Windy&nbsp;City Hacks
       </Headline>
       <Text color="primaryWash" fontSize={[3, 4]} mt={2}>
-        Thanks for the interest! Late registrants aren’t guaranteed a spot, but
-        we’ll do our best.
+        Late registrants aren’t guaranteed a spot, but we’ll do our best.
+        Signup closes this Wednesday.
       </Text>
     </Container>
     <Box.main pb={[4, 5]}>
