@@ -47,7 +47,7 @@ export default () => (
       </Headline>
       <Text color="primaryWash" fontSize={[3, 4]} mt={2}>
         Late registrants aren’t guaranteed a spot, but we’ll do our best.
-        Signup closes this Wednesday.
+        Signup closes at 8pm!
       </Text>
     </Container>
     <Box.main pb={[4, 5]}>

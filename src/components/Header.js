@@ -118,7 +118,7 @@ export default class Header extends PureComponent {
             </A.link>
           </Text>
           <Action to="/register" bg="alt" fontSize={[3, 4]} chevronRight scale>
-            Late registration
+            Regiser until 8pm CST!
           </Action>
         </Container>
       </Base>
