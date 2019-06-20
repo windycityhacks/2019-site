@@ -276,7 +276,7 @@ export default class Registration extends Component {
               const displayName = `${attendee.first_name} ${attendee.last_name}`
               const { email, school, grade, referrer } = attendee
               const profile = { displayName, email, school, grade, referrer }
-              if (typeof FS !== 'undefined') FS.identify(email, profile)
+              // if (typeof FS !== 'undefined') FS.identify(email, profile)
             }
           })
         }}

@@ -40,7 +40,11 @@ const Nav = ({ color = 'white', ...props }) => (
       <Flag mr={[2, 3]} />
       <Item to="/schedule" children="Schedule" />
       <Item to="/venue" children="Venue" />
-      <Item to="/register" children="Register" />
+      <Item
+         to="/register"
+         children="Register"
+         style={{ textDecoration: 'line-through' }}
+       />
     </Bar>
   </Base>
 )
