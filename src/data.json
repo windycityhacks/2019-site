@@ -104,6 +104,11 @@
       "image": "activecampaign.svg"
     },
     {
+      "name": "ServerCentral",
+      "link": "https://www.servercentral.com/",
+      "image": "servercentral.png"
+    },
+    {
       "name": "Make School",
       "link": "https://www.makeschool.com/",
       "image": "make-school.png"
@@ -142,6 +147,11 @@
       "name": "Slack",
       "link": "https://slack.com",
       "image": "slack.svg"
+    },
+    {
+      "name": "Hack Club Bank",
+      "link": "https://hackclub.com/bank/",
+      "image": "hackclub-bank.svg"
     }
   ],
   "additionalSupport": [
@@ -179,11 +189,6 @@
       "name": "tastytrade",
       "link": "https://www.tastytrade.com/",
       "image": "tastytrade.png"
-    },
-    {
-      "name": "Hack Club Bank",
-      "link": "https://hackclub.com/bank/",
-      "image": "hackclub-bank.svg"
     }
   ],
   "judges": [
