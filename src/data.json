@@ -259,13 +259,18 @@
         },
         {
           "time": "4:00pm",
-          "name": "Workshop: To Be Announced!",
-          "emoji": "🌀"
+          "name": "Workshop: Web Synthesizer Music",
+          "emoji": "🎹"
         },
         {
           "time": "6:30pm",
           "name": "Dinner",
           "emoji": "🍽️"
+        },
+        {
+          "time": "8:00pm",
+          "name": "Workshop: AI Robots",
+          "emoji": "🤖"
         }
       ]
     },
@@ -299,11 +304,16 @@
         },
         {
           "time": "9:00am",
+          "name": "Project Submission",
+          "emoji": "📝"
+        },
+        {
+          "time": "9:10am",
           "name": "Judging",
           "emoji": "💬"
         },
         {
-          "time": "11:30am",
+          "time": "11:40am",
           "name": "Closing Ceremony",
           "emoji": "📢"
         },
