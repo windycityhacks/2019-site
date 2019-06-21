@@ -144,6 +144,11 @@
       "image": "nowpow.svg"
     },
     {
+      "name": "Showpad",
+      "link": "https://www.showpad.com/",
+      "image": "showpad.svg"
+    },
+    {
       "name": "Slack",
       "link": "https://slack.com",
       "image": "slack.svg"
