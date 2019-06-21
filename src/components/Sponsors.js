@@ -8,9 +8,6 @@ const Base = styled(Container).attrs({ maxWidth: 72 })`
   grid-gap: ${theme.space[3]}px;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  ${theme.mediaQueries.md} {
-    grid-template-columns: repeat(3, 1fr);
-  }
   a {
     line-height: 0;
     width: 100%;
@@ -19,6 +16,12 @@ const Base = styled(Container).attrs({ maxWidth: 72 })`
     object-fit: contain;
     object-position: left;
     max-height: 5rem;
+  }
+  ${theme.mediaQueries.md} {
+    grid-template-columns: repeat(3, 1fr);
+    &:first-of-type {
+      grid-gap: ${theme.space[4]}px;
+    }
   }
   &:last-of-type {
     ${theme.mediaQueries.lg} {
