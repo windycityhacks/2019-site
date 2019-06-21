@@ -196,7 +196,7 @@
       "name": "Abril Vela",
       "link": "https://twitter.com/abril_vela",
       "pronouns": "she/her",
-      "bio": "CS4All coordinator at Chicago Public Schools. Associate board member of We All Code."
+      "bio": "CS4All coordinator @ Chicago Public Schools. Associate board member of We All Code."
     },
     {
       "name": "Nate Kontny",
@@ -209,6 +209,12 @@
       "link": "http://www.migreyes.com/",
       "pronouns": "he/him",
       "bio": "Director of Product Design @ Sprout Social. Former President of AIGA Chicago. Prev. led design at Trunk Club, Basecamp, & Threadless."
+    },
+    {
+      "name": "Mica Alaniz",
+      "link": "http://micada.org/",
+      "pronouns": "she/her",
+      "bio": "Engineer @ DNC (Democratic National Committee), speaker @ Write/Speak/Code, Girlcon, Latinas in Tech and more, mentor + teacher."
     }
   ],
   "schedule": [
