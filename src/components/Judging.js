@@ -43,9 +43,6 @@ const Judging = () => (
         <Category bg="error">Best game</Category>
       </Flex>
       <Judges />
-      <Text color="muted" fontSize={3} mt={4}>
-        …more coming soon!
-      </Text>
     </Container>
   </Box.section>
 )

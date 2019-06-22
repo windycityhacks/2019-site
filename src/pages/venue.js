@@ -211,10 +211,10 @@ export default () => (
         <LinkOut
           fontSize={2}
           color="primary"
-          href="https://www.officelovin.com/2016/07/29/look-inside-origami-risks-new-chicago-headquarters/"
+          href="https://goo.gl/maps/1oC2ENsSgh7dGtnt7"
           target="_blank"
         >
-          See the space
+          Google Maps
         </LinkOut>
       </GridItem>
       <Map />
