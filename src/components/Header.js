@@ -9,7 +9,6 @@ import {
 } from '@hackclub/design-system'
 import { Link } from 'gatsby'
 import Nav from 'components/Nav'
-import Action from 'components/Action'
 
 const headerFrames = keyframes`
   from {
@@ -117,9 +116,6 @@ export default class Header extends PureComponent {
               Origami Risk, Chicago
             </A.link>
           </Text>
-          <Action to="/register" bg="muted" fontSize={[3, 4]} scale>
-            Registration closed
-          </Action>
         </Container>
       </Base>
     ]
