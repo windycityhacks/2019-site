@@ -38,7 +38,7 @@ const Judging = () => (
         <Category bg="primary">Best overall</Category>
         <Category bg="cool">Best mobile</Category>
         <Category bg="success">Best beginners</Category>
-        <Category bg="warm">Best hardware</Category>
+        <Category bg="warm">Best teamwork</Category>
         <Category bg="alt">Best design</Category>
         <Category bg="error">Best game</Category>
       </Flex>
